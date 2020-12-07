@@ -4,7 +4,7 @@ module.exports = {
   },
   configureWebpack: {
     output: {
-      libraryExport: "default"
+      libraryExport: 'default'
     }
   }
-};
+}
