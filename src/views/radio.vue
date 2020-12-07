@@ -1,11 +1,11 @@
 <template>
   <div class="home">
-    <ai-radio />
+    <ai-choice />
   </div>
 </template>
 
 <script>
 export default {
-  name: "Radio"
-};
+  name: 'Radio'
+}
 </script>

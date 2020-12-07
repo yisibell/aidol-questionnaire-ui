@@ -1,12 +1,14 @@
-import AiRadio from "./radio";
+import AiChoice from './choice'
+import AiTitle from './title'
 
 function install(Vue) {
-  [AiRadio].forEach(v => {
-    Vue.component(v.name, v);
-  });
+  ;[AiChoice, AiTitle].forEach(v => {
+    Vue.component(v.name, v)
+  })
 }
 
 export default {
   install,
-  AiRadio
-};
+  AiChoice,
+  AiTitle
+}

@@ -6,6 +6,12 @@
     "name": "elenh",
     "email": "yisiwings@163.com"
   },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yisibell/aidol-ui.git"
+  },
+  "homepage": "https://github.com/yisibell/aidol-ui",
   "keywords": [
     "vue",
     "questionnaire",
