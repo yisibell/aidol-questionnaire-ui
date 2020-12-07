@@ -26,13 +26,7 @@ export default {
     // 选项列表
     options: {
       type: Array,
-      default: () => [
-        { label: 'A. 选项文本内容', value: 1 },
-        { label: 'B. 选项文本内容', value: 2 },
-        { label: 'C. 选项文本内容', value: 3 },
-        { label: 'D. 选项文本内容', value: 4 },
-        { label: 'E. 选项文本内容', value: 5 }
-      ]
+      default: () => []
     },
     // 配置选项
     props: {
@@ -45,7 +39,7 @@ export default {
     // 是否多选
     multiple: {
       type: Boolean,
-      default: true
+      default: false
     },
     // 多选时，最大选择个数, 0 表示不限制
     max: {
@@ -60,8 +54,7 @@ export default {
     // 标题内容
     titleContent: {
       type: String,
-      default:
-        'this is a question title.this is a question title.this is a question title.this is a question title.this is a question title.this is a question title.'
+      default: ''
     }
   },
   data() {
@@ -116,33 +109,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.ai-choice {
-  background-color: #f2f2f2;
-  &__list {
-    padding: 15px;
-
-    &__item {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 50px;
-      width: 100%;
-      padding: 15px;
-      border-radius: 6px;
-      background-color: #fff;
-      margin-bottom: 20px;
-      box-sizing: border-box;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .is-active {
-      background-color: #d7d7d7;
-      font-size: 16px;
-      font-weight: 600;
-    }
-  }
-}
-</style>

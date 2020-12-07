@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/radio">radio</router-link> |
-      <router-link to="/checkbox">checkbox</router-link>
+      <router-link to="/radio">单选题</router-link> |
+      <router-link to="/checkbox">多选题</router-link> |
+      <router-link to="/short-answer">简答题</router-link>
     </div>
     <div id="app-main">
       <router-view />
