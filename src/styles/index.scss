@@ -1,3 +1,5 @@
-@import './title.scss';
-@import './choice.scss';
-@import './short-answer';
+@import './themes/variables.scss';
+@import './modules/title.scss';
+@import './modules/choice.scss';
+@import './modules/short-answer.scss';
+@import './modules/block-tips.scss';
