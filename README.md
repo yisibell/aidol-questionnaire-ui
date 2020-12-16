@@ -1,30 +1,58 @@
 # aidol-questionnaire-ui
 A questionnaire survey ui library for Vue.js.
 
-## Project setup
-```
-npm install
+# Installation
+
+``` zsh
+$ npm i @aidol/questionnaire-ui -S
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run dev
+# Usage
+
+``` js
+// src/plugins/aidol-questionnaire-ui.js
+
+import Vue from 'vue'
+import AidolQuestionnaireUI from '@aidol/questionnaire-ui'
+
+import '@aidol/questionnaire-ui/dist/AidolQuestionnaireUI.css'
+
+Vue.use(AidolQuestionnaireUI)
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+``` js
+// src/main.js
+import Vue from 'vue'
+
+// ...
+
+import '@/plugins/aidol-questionnaire-ui'
+
+// ...
+
+new Vue({
+  // ...
+})
 ```
 
-### Run your unit tests
-```
-npm run test:unit
-```
+# Components
 
-### Lints and fixes files
-```
-npm run lint
-```
+## ai-choice
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+选择题。包含单选、多选。
+
+## ai-short-answer
+
+简答题。
+
+## ai-rate
+
+评分。
+
+## ai-rate-group
+
+评分组。
+
+## ai-block-tips
+
+提示块。
