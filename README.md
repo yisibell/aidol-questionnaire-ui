@@ -44,7 +44,7 @@ new Vue({
 ### Attributes
 
 | 参数 | 说明 | 类型 |可选值 | 默认值 |
-| :---: |:---: |:---: |:---:|
+| :---: |:---: |:---: |:---:| :---: |
 | `value/v-model` | 绑定值 | `Number/String/Array` | - | - |
 | `multiple` | 是否多选 | `Boolean` | - | `false` |
 | `max` |  多选时，最大可选择个数, `0` 表示不限制 | `Number` | - | `0` |
