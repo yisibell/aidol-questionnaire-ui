@@ -1,19 +1,17 @@
 <template>
-  <ai-block-tips>
-    <div class="ai-choice">
-      <ai-title :style="titleStyle" :content="titleContent" />
-      <div class="ai-choice__list">
-        <div
-          :key="i"
-          v-for="(v, i) in options"
-          :class="['ai-choice__list__item', { 'is-active': isActive(v) }]"
-          :style="v.styles"
-          v-html="v[props.label]"
-          @click="toggleChecked(v[props.value])"
-        ></div>
-      </div>
+  <div class="ai-choice">
+    <ai-title :style="titleStyle" :content="titleContent" />
+    <div class="ai-choice__list">
+      <div
+        :key="i"
+        v-for="(v, i) in options"
+        :class="['ai-choice__list__item', { 'is-active': isActive(v) }]"
+        :style="v.styles"
+        v-html="v[props.label]"
+        @click="toggleChecked(v[props.value])"
+      ></div>
     </div>
-  </ai-block-tips>
+  </div>
 </template>
 
 <script>

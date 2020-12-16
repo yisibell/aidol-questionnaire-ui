@@ -5,7 +5,7 @@
 
     &__item {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       height: 50px;
       width: 100%;
@@ -15,13 +15,13 @@
       margin-bottom: 20px;
       box-sizing: border-box;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 16px;
+      color: $--font-color-grey;
     }
 
     .is-active {
       background-color: $--choice-bg-color-active;
       font-size: 16px;
-      font-weight: 600;
     }
   }
 }

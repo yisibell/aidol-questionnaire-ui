@@ -1,10 +1,10 @@
 <template>
-  <div class="ai-block-tips">
+  <div class="ai-block-tips" :class="[{ 'is-active': isActive }]">
     <div class="ai-block-tips__content">
       <slot name="default"></slot>
     </div>
-    <div class="ai-block-tips__message">
-      <slot name="content">{{ content }}</slot>
+    <div v-show="isActive" class="ai-block-tips__message">
+      <slot name="content">{{ message }}</slot>
     </div>
   </div>
 </template>
@@ -21,6 +21,11 @@ export default {
     message: {
       type: String,
       default: ''
+    }
+  },
+  computed: {
+    isActive() {
+      return !!this.message
     }
   }
 }

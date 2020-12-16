@@ -1,4 +1,16 @@
 .ai-block-tips {
   padding: 15px;
-  border: 2px dashed #{$--color-danger};
+  
+  &.is-active {
+    border: 2px dashed #{$--color-danger};
+  }
+
+  &__message {
+    padding: 10px;
+    border: 1px solid #{$--block-tips-message-color-danger};
+    border-radius: 6px;
+    color: $--block-tips-message-color-danger;
+    font-style: italic;
+    font-size: 14px;
+  }
 }
