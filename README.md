@@ -1,4 +1,4 @@
-# aidol-ui
+# aidol-questionnaire-ui
 A questionnaire survey ui library for Vue.js.
 
 ## Project setup

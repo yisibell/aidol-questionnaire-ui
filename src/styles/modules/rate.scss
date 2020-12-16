@@ -1,0 +1,45 @@
+.ai-rate {
+
+  .active {
+    background-color: #B9E8FF;
+    border: 1px solid #B9E8FF;
+  }
+
+  &__title {
+    font-size: 14px;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__item {
+      width: 32px;
+      height: 32px;
+      border-radius: 4px;
+      border: 1px solid #a19f9f;
+      background-color: #fff;
+      margin: 5px 10px 5px 0px;
+      text-align: center;
+      line-height: 32px;
+      cursor: pointer;
+      font-style: italic;
+      font-size: 14px;
+
+      &.is-hover-active {
+        @extend .active;
+      }
+
+      &.is-active {
+        @extend .active;
+      }
+    }
+
+    &__text {
+      font-size: 14px;
+      color: $--font-color-grey;
+    }
+  }
+}

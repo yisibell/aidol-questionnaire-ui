@@ -1,7 +1,8 @@
 {
-  "name": "aidol-ui",
+  "name": "@aidol/questionnaire-ui",
   "description": "A questionnaire survey ui library for Vue.js.",
   "version": "0.1.0",
+  "main": "dist/AidolQuestionnaireUI.umd.min.js",
   "author": {
     "name": "elenh",
     "email": "yisiwings@163.com"
@@ -9,9 +10,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:yisibell/aidol-ui.git"
+    "url": "git@github.com:yisibell/aidol-questionnaire-ui.git"
   },
-  "homepage": "https://github.com/yisibell/aidol-ui",
+  "homepage": "https://github.com/yisibell/aidol-questionnaire-ui",
   "keywords": [
     "vue",
     "questionnaire",
@@ -20,7 +21,7 @@
   ],
   "scripts": {
     "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name aidol-ui ./src/components/index.js",
+    "build": "vue-cli-service build --target lib --name AidolQuestionnaireUI ./src/components/index.js",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },

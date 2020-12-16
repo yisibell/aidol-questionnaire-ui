@@ -1,5 +1,14 @@
-module.exports =
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["AidolQuestionnaireUI"] = factory();
+	else
+		root["AidolQuestionnaireUI"] = factory();
+})((typeof self !== 'undefined' ? self : this), function() {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -801,6 +810,32 @@ module.exports = {
   // https://tc39.github.io/ecma262/#sec-array.prototype.indexof
   indexOf: createMethod(false)
 };
+
+
+/***/ }),
+
+/***/ "4de4":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var $ = __webpack_require__("23e7");
+var $filter = __webpack_require__("b727").filter;
+var arrayMethodHasSpeciesSupport = __webpack_require__("1dde");
+var arrayMethodUsesToLength = __webpack_require__("ae40");
+
+var HAS_SPECIES_SUPPORT = arrayMethodHasSpeciesSupport('filter');
+// Edge 14- issue
+var USES_TO_LENGTH = arrayMethodUsesToLength('filter');
+
+// `Array.prototype.filter` method
+// https://tc39.github.io/ecma262/#sec-array.prototype.filter
+// with adding support of @@species
+$({ target: 'Array', proto: true, forced: !HAS_SPECIES_SUPPORT || !USES_TO_LENGTH }, {
+  filter: function filter(callbackfn /* , thisArg */) {
+    return $filter(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
+  }
+});
 
 
 /***/ }),
@@ -2473,6 +2508,27 @@ module.exports = function (name) {
 
 /***/ }),
 
+/***/ "b64b":
+/***/ (function(module, exports, __webpack_require__) {
+
+var $ = __webpack_require__("23e7");
+var toObject = __webpack_require__("7b0b");
+var nativeKeys = __webpack_require__("df75");
+var fails = __webpack_require__("d039");
+
+var FAILS_ON_PRIMITIVES = fails(function () { nativeKeys(1); });
+
+// `Object.keys` method
+// https://tc39.github.io/ecma262/#sec-object.keys
+$({ target: 'Object', stat: true, forced: FAILS_ON_PRIMITIVES }, {
+  keys: function keys(it) {
+    return nativeKeys(toObject(it));
+  }
+});
+
+
+/***/ }),
+
 /***/ "b727":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2909,6 +2965,37 @@ module.exports =
 
 /***/ }),
 
+/***/ "dbb4":
+/***/ (function(module, exports, __webpack_require__) {
+
+var $ = __webpack_require__("23e7");
+var DESCRIPTORS = __webpack_require__("83ab");
+var ownKeys = __webpack_require__("56ef");
+var toIndexedObject = __webpack_require__("fc6a");
+var getOwnPropertyDescriptorModule = __webpack_require__("06cf");
+var createProperty = __webpack_require__("8418");
+
+// `Object.getOwnPropertyDescriptors` method
+// https://tc39.github.io/ecma262/#sec-object.getownpropertydescriptors
+$({ target: 'Object', stat: true, sham: !DESCRIPTORS }, {
+  getOwnPropertyDescriptors: function getOwnPropertyDescriptors(object) {
+    var O = toIndexedObject(object);
+    var getOwnPropertyDescriptor = getOwnPropertyDescriptorModule.f;
+    var keys = ownKeys(O);
+    var result = {};
+    var index = 0;
+    var key, descriptor;
+    while (keys.length > index) {
+      descriptor = getOwnPropertyDescriptor(O, key = keys[index++]);
+      if (descriptor !== undefined) createProperty(result, key, descriptor);
+    }
+    return result;
+  }
+});
+
+
+/***/ }),
+
 /***/ "ddb0":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3117,6 +3204,29 @@ Iterators.Arguments = Iterators.Array;
 addToUnscopables('keys');
 addToUnscopables('values');
 addToUnscopables('entries');
+
+
+/***/ }),
+
+/***/ "e439":
+/***/ (function(module, exports, __webpack_require__) {
+
+var $ = __webpack_require__("23e7");
+var fails = __webpack_require__("d039");
+var toIndexedObject = __webpack_require__("fc6a");
+var nativeGetOwnPropertyDescriptor = __webpack_require__("06cf").f;
+var DESCRIPTORS = __webpack_require__("83ab");
+
+var FAILS_ON_PRIMITIVES = fails(function () { nativeGetOwnPropertyDescriptor(1); });
+var FORCED = !DESCRIPTORS || FAILS_ON_PRIMITIVES;
+
+// `Object.getOwnPropertyDescriptor` method
+// https://tc39.github.io/ecma262/#sec-object.getownpropertydescriptor
+$({ target: 'Object', stat: true, forced: FORCED, sham: !DESCRIPTORS }, {
+  getOwnPropertyDescriptor: function getOwnPropertyDescriptor(it, key) {
+    return nativeGetOwnPropertyDescriptor(toIndexedObject(it), key);
+  }
+});
 
 
 /***/ }),
@@ -3807,6 +3917,372 @@ var short_answer_component = normalizeComponent(
 )
 
 /* harmony default export */ var short_answer = (short_answer_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"32e8a952-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/block-tips/index.vue?vue&type=template&id=3b836f96&
+var block_tipsvue_type_template_id_3b836f96_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ai-block-tips",class:[{ 'is-active': _vm.isActive }]},[_c('div',{staticClass:"ai-block-tips__content"},[_vm._t("default")],2),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isActive),expression:"isActive"}],staticClass:"ai-block-tips__message"},[_vm._t("content",[_vm._v(_vm._s(_vm.message))])],2)])}
+var block_tipsvue_type_template_id_3b836f96_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/block-tips/index.vue?vue&type=template&id=3b836f96&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/block-tips/index.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ var block_tipsvue_type_script_lang_js_ = ({
+  name: 'AiBlockTips',
+  props: {
+    // success, danger, warning
+    type: {
+      type: String,
+      default: ''
+    },
+    message: {
+      type: String,
+      default: ''
+    }
+  },
+  computed: {
+    isActive: function isActive() {
+      return !!this.message;
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/block-tips/index.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_block_tipsvue_type_script_lang_js_ = (block_tipsvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/block-tips/index.vue
+
+
+
+
+
+/* normalize component */
+
+var block_tips_component = normalizeComponent(
+  components_block_tipsvue_type_script_lang_js_,
+  block_tipsvue_type_template_id_3b836f96_render,
+  block_tipsvue_type_template_id_3b836f96_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var block_tips = (block_tips_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"32e8a952-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/rate/index.vue?vue&type=template&id=fab3be82&
+var ratevue_type_template_id_fab3be82_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ai-rate"},[_c('div',{staticClass:"ai-rate__title"},[_vm._v(_vm._s(_vm.titleContent))]),_c('div',{staticClass:"ai-rate__content"},[_vm._l((_vm.max),function(v){return _c('div',{key:v,staticClass:"ai-rate__content__item",class:[
+        { 'is-hover-active': v <= _vm.hoverActive && _vm.hover_ing },
+        { 'is-active': v <= _vm.active && !_vm.hover_ing }
+      ],on:{"mouseover":function($event){return _vm.handleMouseover(v)},"mouseout":function($event){return _vm.handleMouseout(v)},"click":function($event){return _vm.handleClick(v)}}},[_vm._v(" "+_vm._s(v)+" ")])}),(_vm.showText)?_c('div',{staticClass:"ai-rate__content__text"},[_vm._v(_vm._s(_vm.rateText))]):_vm._e()],2)])}
+var ratevue_type_template_id_fab3be82_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/rate/index.vue?vue&type=template&id=fab3be82&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/rate/index.vue?vue&type=script&lang=js&
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ var ratevue_type_script_lang_js_ = ({
+  name: 'AiRate',
+  props: {
+    // 双绑值
+    value: {
+      type: [Number, String],
+      default: 0
+    },
+    // 标题
+    titleContent: {
+      type: String,
+      default: ''
+    },
+    // 最大值
+    max: {
+      type: Number,
+      default: 5
+    },
+    // 是否显示辅助文字，若为真，则会从 texts 数组中选取当前分数对应的文字内容
+    showText: {
+      type: Boolean,
+      default: true
+    },
+    // 辅助文字数组
+    texts: {
+      type: Array,
+      default: function _default() {
+        return ['极差', '失望', '一般', '满意', '惊喜'];
+      }
+    }
+  },
+  data: function data() {
+    return {
+      hoverActive: '',
+      active: this.value,
+      hover_ing: false
+    };
+  },
+  computed: {
+    rateText: function rateText() {
+      var ac = this.active;
+
+      if (this.hover_ing) {
+        ac = this.hoverActive;
+      } else {
+        ac = this.active;
+      }
+
+      var index = ac - 1;
+      return this.texts[index];
+    }
+  },
+  watch: {
+    value: {
+      handler: function handler(val) {
+        this.active = val;
+      }
+    }
+  },
+  methods: {
+    handleMouseover: function handleMouseover(index) {
+      this.hoverActive = index;
+      this.hover_ing = true;
+    },
+    handleMouseout: function handleMouseout(index) {
+      this.hoverActive = index;
+      this.hover_ing = false;
+    },
+    handleClick: function handleClick(index) {
+      this.active = index;
+      this.handleInput();
+    },
+    handleInput: function handleInput() {
+      this.$emit('input', this.active);
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/rate/index.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_ratevue_type_script_lang_js_ = (ratevue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/rate/index.vue
+
+
+
+
+
+/* normalize component */
+
+var rate_component = normalizeComponent(
+  components_ratevue_type_script_lang_js_,
+  ratevue_type_template_id_fab3be82_render,
+  ratevue_type_template_id_fab3be82_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var rate = (rate_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"32e8a952-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/rate-group/index.vue?vue&type=template&id=75c8e154&
+var rate_groupvue_type_template_id_75c8e154_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ai-rate-group"},[_c('div',{staticClass:"ai-rate-group__title"},[_c('ai-title',{style:(_vm.titleStyle),attrs:{"content":_vm.titleContent}})],1),_c('div',{staticClass:"ai-rate-group__list"},_vm._l((_vm.options),function(v,i){return _c('ai-rate',{key:i,attrs:{"title-content":v.label,"max":_vm.max},on:{"input":_vm.handleInput},model:{value:(_vm.checkedMap[v.value]),callback:function ($$v) {_vm.$set(_vm.checkedMap, v.value, $$v)},expression:"checkedMap[v.value]"}})}),1)])}
+var rate_groupvue_type_template_id_75c8e154_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/rate-group/index.vue?vue&type=template&id=75c8e154&
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.filter.js
+var es_array_filter = __webpack_require__("4de4");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.get-own-property-descriptor.js
+var es_object_get_own_property_descriptor = __webpack_require__("e439");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.get-own-property-descriptors.js
+var es_object_get_own_property_descriptors = __webpack_require__("dbb4");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.keys.js
+var es_object_keys = __webpack_require__("b64b");
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js
+
+
+
+
+
+
+
+
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/rate-group/index.vue?vue&type=script&lang=js&
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ var rate_groupvue_type_script_lang_js_ = ({
+  name: 'AiRateGroup',
+  props: {
+    value: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
+    },
+    // 评分列表配置
+    // [{ label: '' , value: 0 }]
+    options: {
+      type: Array,
+      default: function _default() {
+        return [];
+      }
+    },
+    // 标题样式
+    titleStyle: {
+      type: [Object, Array, undefined],
+      default: undefined
+    },
+    // 标题内容
+    titleContent: {
+      type: String,
+      default: ''
+    },
+    // 评分最大值
+    max: {
+      type: Number,
+      default: 10
+    }
+  },
+  data: function data() {
+    return {
+      checkedMap: {}
+    };
+  },
+  watch: {
+    value: {
+      handler: function handler(val) {
+        this.checkedMap = _objectSpread2({}, val);
+      },
+      immediate: true
+    }
+  },
+  methods: {
+    handleInput: function handleInput() {
+      this.$emit('input', this.checkedMap);
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/rate-group/index.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_rate_groupvue_type_script_lang_js_ = (rate_groupvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/rate-group/index.vue
+
+
+
+
+
+/* normalize component */
+
+var rate_group_component = normalizeComponent(
+  components_rate_groupvue_type_script_lang_js_,
+  rate_groupvue_type_template_id_75c8e154_render,
+  rate_groupvue_type_template_id_75c8e154_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var rate_group = (rate_group_component.exports);
 // EXTERNAL MODULE: ./src/styles/index.scss
 var styles = __webpack_require__("b20f");
 
@@ -3819,9 +4295,12 @@ var styles = __webpack_require__("b20f");
 
 
 
+
+
+
 function install(Vue) {
   ;
-  [choice, title, short_answer].forEach(function (v) {
+  [choice, title, short_answer, block_tips, rate, rate_group].forEach(function (v) {
     Vue.component(v.name, v);
   });
 }
@@ -3830,7 +4309,10 @@ function install(Vue) {
   install: install,
   AiTitle: title,
   AiChoice: choice,
-  AiShortAnswer: short_answer
+  AiShortAnswer: short_answer,
+  AiBlockTips: block_tips,
+  AiRate: rate,
+  AiRateGroup: rate_group
 });
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
@@ -3969,4 +4451,5 @@ module.exports = NATIVE_SYMBOL
 /***/ })
 
 /******/ })["default"];
-//# sourceMappingURL=aidol-ui.common.js.map
+});
+//# sourceMappingURL=AidolQuestionnaireUI.umd.js.map
