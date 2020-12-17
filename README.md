@@ -79,16 +79,47 @@ new Vue({
 | `maxlength` | 可输入最大字符长度 | `Number/String` | - | - |
 | `disabled` | 是否禁用 | `Boolean` | - | `false` |
 | `readonly` | 是否只读 | `Boolean` | - | `false` |
+| `resize` | 控制是否能被用户缩放	 | `String` | `none, both, horizontal, vertical` | - |
+| `rows` | 输入框行数	| `String` | - | `10` |
 
 
 ## ai-rate
 
 评分。
 
+### Attributes
+
+| 参数 | 说明 | 类型 |可选值 | 默认值 |
+| :---: |:---: |:---: |:---:| :---: |
+| `index` | 题目索引值 | `Number/String` | - | - |
+| `value/v-model` | 绑定值 | `Number/String` | - | `0` |
+| `max` | 最大值 | `Number` | - | `5` |
+| `showText` | 是否显示辅助文字，若为真，则会从 texts 数组中选取当前分数对应的文字内容 | `Boolean` | - | `false` |
+| `texts` | 辅助文字数组 | `Array` | - | `[]` |
+
 ## ai-rate-group
 
 评分组。
 
+### Attributes
+
+| 参数 | 说明 | 类型 |可选值 | 默认值 |
+| :---: |:---: |:---: |:---:| :---: |
+| `index` | 题目索引值 | `Number/String` | - | - |
+| `value/v-model` | 绑定值 | `Number/String` | - | `0` |
+| `max` | 最大值 | `Number` | - | `5` |
+| `showText` | 是否显示辅助文字，若为真，则会从 texts 数组中选取当前分数对应的文字内容 | `Boolean` | - | `false` |
+| `texts` | 辅助文字数组 | `Array` | - | `[]` |
+| `options` | 评分列表配置 | `Array` | - | `[]` |
+| `titleStyle` | 定义标题的样式，同 `vue` 中的 `style` prop | `Object/Array` | - | - |
+| `titleContent` | 标题的内容 | `String` | - | - |
+
 ## ai-block-tips
 
 提示块。
+
+### Attributes
+
+| 参数 | 说明 | 类型 |可选值 | 默认值 |
+| :---: |:---: |:---: |:---:| :---: |
+| `message` | 提示信息文本，当其为 `非空字符串` 时，显示提示效果 | `String` | - | '' |

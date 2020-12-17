@@ -79,6 +79,7 @@ export default {
       type: Boolean,
       default: false
     },
+    // none, both, horizontal, vertical
     resize: {
       type: String,
       default: 'inherit'
