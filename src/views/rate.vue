@@ -3,6 +3,7 @@
     <ai-block-tips :message="validMessage">
       <ai-rate-group
         v-model="answer"
+        :index="4"
         title-content="What is your fit preference?"
         :options="options"
       />

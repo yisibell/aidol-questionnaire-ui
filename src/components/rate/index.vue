@@ -4,7 +4,7 @@
     <div class="ai-rate__content">
       <div
         :key="v"
-        v-for="v in max"
+        v-for="v in rateMax"
         class="ai-rate__content__item"
         :class="[
           { 'is-hover-active': v <= hoverActive && hover_ing },
@@ -37,18 +37,18 @@ export default {
     },
     // 最大值
     max: {
-      type: Number,
+      type: [Number, String],
       default: 5
     },
     // 是否显示辅助文字，若为真，则会从 texts 数组中选取当前分数对应的文字内容
     showText: {
       type: Boolean,
-      default: true
+      default: false
     },
     // 辅助文字数组
     texts: {
       type: Array,
-      default: () => ['极差', '失望', '一般', '满意', '惊喜']
+      default: () => []
     }
   },
   data() {
@@ -59,6 +59,10 @@ export default {
     }
   },
   computed: {
+    rateMax() {
+      const { parseInt } = Number
+      return parseInt(this.max)
+    },
     rateText() {
       let ac = this.active
 

@@ -1,6 +1,11 @@
 <template>
   <div class="ai-choice">
-    <ai-title :style="titleStyle" :content="titleContent" />
+    <ai-title
+      :index="index"
+      :style="titleStyle"
+      :content="titleContent"
+      :suffix-text="titleSuffixText"
+    />
     <div class="ai-choice__list">
       <div
         :key="i"
@@ -18,6 +23,11 @@
 export default {
   name: 'AiChoice',
   props: {
+    // 题目索引
+    index: {
+      type: [Number, String],
+      default: ''
+    },
     // 双绑数据
     value: {
       type: [Number, String, Array],
@@ -43,7 +53,7 @@ export default {
     },
     // 多选时，最大选择个数, 0 表示不限制
     max: {
-      type: Number,
+      type: [Number, String],
       default: 0
     },
     // 标题样式
@@ -63,8 +73,20 @@ export default {
     }
   },
   computed: {
+    // 是否超出最大选择个数
     isOuter() {
-      return this.multiple && this.max > 0 && this.checked.length > this.max
+      return (
+        this.multiple &&
+        this.choiceMax > 0 &&
+        this.checked.length > this.choiceMax
+      )
+    },
+    titleSuffixText() {
+      return this.multiple ? '（Multiple choice）' : '（Single choice）'
+    },
+    choiceMax() {
+      const { parseInt } = Number
+      return parseInt(this.max)
     }
   },
   watch: {

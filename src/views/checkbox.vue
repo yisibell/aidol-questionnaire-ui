@@ -2,6 +2,7 @@
   <div>
     <ai-choice
       v-model="checked"
+      :index="2"
       multiple
       :options="options"
       :max="2"

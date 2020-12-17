@@ -1,7 +1,7 @@
 <template>
   <div class="ai-rate-group">
     <div class="ai-rate-group__title">
-      <ai-title :style="titleStyle" :content="titleContent" />
+      <ai-title :style="titleStyle" :index="index" :content="titleContent" />
     </div>
     <div class="ai-rate-group__list">
       <ai-rate
@@ -10,6 +10,8 @@
         v-model="checkedMap[v.value]"
         :title-content="v.label"
         :max="max"
+        :show-text="showText"
+        :texts="texts"
         @input="handleInput"
       />
     </div>
@@ -20,6 +22,12 @@
 export default {
   name: 'AiRateGroup',
   props: {
+    // 题目索引
+    index: {
+      type: [Number, String],
+      default: ''
+    },
+    // 绑定值
     value: {
       type: Object,
       default: () => ({})
@@ -42,8 +50,18 @@ export default {
     },
     // 评分最大值
     max: {
-      type: Number,
+      type: [Number, String],
       default: 10
+    },
+    // 是否显示辅助文字，若为真，则会从 texts 数组中选取当前分数对应的文字内容
+    showText: {
+      type: Boolean,
+      default: false
+    },
+    // 辅助文字数组
+    texts: {
+      type: Array,
+      default: () => []
     }
   },
   data() {

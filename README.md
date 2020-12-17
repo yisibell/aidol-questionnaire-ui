@@ -46,6 +46,7 @@ new Vue({
 | 参数 | 说明 | 类型 |可选值 | 默认值 |
 | :---: |:---: |:---: |:---:| :---: |
 | `value/v-model` | 绑定值 | `Number/String/Array` | - | - |
+| `index` | 题目索引值 | `Number/String` | - | - |
 | `multiple` | 是否多选 | `Boolean` | - | `false` |
 | `max` |  多选时，最大可选择个数, `0` 表示不限制 | `Number` | - | `0` |
 | `options` | 待选项列表 | `Array` | - | `[]` |
@@ -58,13 +59,27 @@ new Vue({
 
 | 键名 | 说明 | 默认值 |
 | :---: | :---: | :---: |
-| label | 指定选项标签为选项对象的某个属性值 | 'label' |
-| value | 指定选项的值为选项对象的某个属性值 | 'value' |
+| `label` | 指定选项标签为选项对象的某个属性值 | 'label' |
+| `value` | 指定选项的值为选项对象的某个属性值 | 'value' |
 
 
 ## ai-short-answer
 
 简答题。
+
+### Attributes
+
+| 参数 | 说明 | 类型 |可选值 | 默认值 |
+| :---: |:---: |:---: |:---:| :---: |
+| `index` | 题目索引值 | `Number/String` | - | - |
+| `value/v-model` | 绑定值 | `String` | - | - |
+| `titleStyle` | 定义标题的样式，同 `vue` 中的 `style` prop | `Object/Array` | - | - |
+| `titleContent` | 标题的内容 | `String` | - | - |
+| `placeholder` | 占位内容 | `String` | - | - |
+| `maxlength` | 可输入最大字符长度 | `Number/String` | - | - |
+| `disabled` | 是否禁用 | `Boolean` | - | `false` |
+| `readonly` | 是否只读 | `Boolean` | - | `false` |
+
 
 ## ai-rate
 

@@ -1,6 +1,10 @@
 <template>
   <div class="ai-short-answer">
-    <ai-title :style="titleStyle">{{ titleContent }}</ai-title>
+    <ai-title
+      :style="titleStyle"
+      :index="index"
+      :content="titleContent"
+    ></ai-title>
     <div class="ai-short-answer__content">
       <textarea
         class="ai-short-answer__content__inner"
@@ -30,6 +34,11 @@ export default {
     AiTitle
   },
   props: {
+    // 题目索引
+    index: {
+      type: [Number, String],
+      default: ''
+    },
     value: {
       type: String,
       default: ''
