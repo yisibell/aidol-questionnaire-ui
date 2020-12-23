@@ -4,7 +4,8 @@
       <router-link to="/radio">单选题</router-link> |
       <router-link to="/checkbox">多选题</router-link> |
       <router-link to="/short-answer">简答题</router-link> |
-      <router-link to="/rate">量表题</router-link>
+      <router-link to="/rate">量表题</router-link> |
+      <router-link to="/radio-image">单选题-图片</router-link>
     </div>
     <div id="app-main">
       <router-view />
@@ -41,6 +42,14 @@ body {
   &-main {
     width: 600px;
     margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #app {
+    &-main {
+      width: 100%;
+    }
   }
 }
 </style>

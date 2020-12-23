@@ -6,15 +6,26 @@
       :content="titleContent"
       :suffix-text="titleSuffixText"
     />
-    <div class="ai-choice__list">
+    <div :class="choiceListClass">
       <div
         :key="i"
         v-for="(v, i) in options"
-        :class="['ai-choice__list__item', { 'is-active': isActive(v) }]"
+        :class="[choiceListItemClass, { 'is-active': isActive(v) }]"
         :style="v.styles"
-        v-html="v[props.label]"
         @click="toggleChecked(v[props.value])"
-      ></div>
+      >
+        <div v-if="type === 'image'" class="ai-choice__list--image__item__wrap">
+          <div class="ai-choice__list--image__item__wrap__icon">
+            <div class="ai-choice__list--image__item__wrap__icon__inner"></div>
+          </div>
+          <img :src="v.src" />
+          <div
+            v-html="v[props.label]"
+            class="ai-choice__list--image__item__wrap__label"
+          ></div>
+        </div>
+        <div v-else v-html="v[props.label]"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -65,6 +76,13 @@ export default {
     titleContent: {
       type: String,
       default: ''
+    },
+    // 答题类型
+    // image 图片
+    // text 普通文本
+    type: {
+      type: String,
+      default: 'text'
     }
   },
   data() {
@@ -87,6 +105,16 @@ export default {
     choiceMax() {
       const { parseInt } = Number
       return parseInt(this.max)
+    },
+    choiceListClass() {
+      return this.type === 'image'
+        ? 'ai-choice__list--image'
+        : 'ai-choice__list'
+    },
+    choiceListItemClass() {
+      return this.type === 'image'
+        ? 'ai-choice__list--image__item'
+        : 'ai-choice__list__item'
     }
   },
   watch: {

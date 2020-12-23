@@ -32,6 +32,11 @@ const routes = [
     path: '/rate',
     name: 'Rate',
     component: () => import('@/views/rate')
+  },
+  {
+    path: '/radio-image',
+    name: 'RadioImage',
+    component: () => import('@/views/radio-image')
   }
 ]
 
