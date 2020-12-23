@@ -21,6 +21,8 @@ body {
 }
 
 #app {
+  padding: 10px;
+
   #nav {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

@@ -20,11 +20,11 @@ export default {
         'Please complete the current question before clicking the next.',
       checked: '',
       options: [
-        { label: 'A. 选项文本内容', value: 1 },
-        { label: 'B. 选项文本内容', value: 2 },
-        { label: 'C. 选项文本内容', value: 3 },
-        { label: 'D. 选项文本内容', value: 4 },
-        { label: 'E. 选项文本内容', value: 5 }
+        { label: '选项文本内容', value: 1 },
+        { label: '选项文本内容', value: 2 },
+        { label: '选项文本内容', value: 3 },
+        { label: '选项文本内容', value: 4 },
+        { label: '选项文本内容', value: 5 }
       ]
     }
   }

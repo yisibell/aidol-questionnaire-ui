@@ -49,18 +49,13 @@ new Vue({
 | `index` | 题目索引值 | `Number/String` | - | - |
 | `multiple` | 是否多选 | `Boolean` | - | `false` |
 | `max` |  多选时，最大可选择个数, `0` 表示不限制 | `Number` | - | `0` |
-| `options` | 待选项列表 | `Array` | - | `[]` |
-| `props` | 配置选项 | `Object` | - | 见下表 |
 | `titleStyle` | 定义标题的样式，同 `vue` 中的 `style` prop | `Object/Array` | - | - |
 | `titleContent` | 标题的内容 | `String` | - | - |
-
-
-**props 配置**
-
-| 键名 | 说明 | 默认值 |
-| :---: | :---: | :---: |
-| `label` | 指定选项标签为选项对象的某个属性值 | 'label' |
-| `value` | 指定选项的值为选项对象的某个属性值 | 'value' |
+| `type` | 指定选项内容的类型，当是 `image` 时，将使用待选项列表项中的 `src` 字段作为图片链接展示 | `String` | `text/image` | `text` |
+| `autoOptionsIndex` | 是否自动生成待选项索引标识符 | `Boolean` | - | `true` |
+| `optionsIndexSet` | 自动生成待选项索引标识符时的匹配列表 | `Array` | - | `['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']` |
+| `options` | 待选项列表 | `Array` | - | `[]` |
+| `props` | 配置选项 | `Object` | - | 见下表 |
 
 
 ## ai-short-answer
@@ -113,6 +108,7 @@ new Vue({
 | `options` | 评分列表配置 | `Array` | - | `[]` |
 | `titleStyle` | 定义标题的样式，同 `vue` 中的 `style` prop | `Object/Array` | - | - |
 | `titleContent` | 标题的内容 | `String` | - | - |
+| `props` | 配置选项 | `Object` | - | 见下表 |
 
 ## ai-block-tips
 
@@ -123,3 +119,12 @@ new Vue({
 | 参数 | 说明 | 类型 |可选值 | 默认值 |
 | :---: |:---: |:---: |:---:| :---: |
 | `message` | 提示信息文本，当其为 `非空字符串` 时，显示提示效果 | `String` | - | '' |
+
+
+# props 配置
+
+| 键名 | 说明 | 默认值 |
+| :---: | :---: | :---: |
+| `label` | 指定选项标签为选项对象的某个属性值 | 'label' |
+| `value` | 指定选项的值为选项对象的某个属性值 | 'value' |
+| `src` | 指定选项的图片链接为选项对象的某个属性值 | 'src' |

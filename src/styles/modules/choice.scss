@@ -38,6 +38,7 @@
       margin-bottom: 15px;
       padding: 6px;
       cursor: pointer;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
       &__wrap {
         width: 100%;

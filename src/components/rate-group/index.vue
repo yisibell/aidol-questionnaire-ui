@@ -6,9 +6,9 @@
     <div class="ai-rate-group__list">
       <ai-rate
         :key="i"
-        v-for="(v, i) in options"
-        v-model="checkedMap[v.value]"
-        :title-content="v.label"
+        v-for="(v, i) in realOptions"
+        v-model="checkedMap[v[props.value]]"
+        :title-content="v[props.label]"
         :max="max"
         :show-text="showText"
         :texts="texts"
@@ -19,8 +19,10 @@
 </template>
 
 <script>
+import PropsOptions from '@/mixin/props-options'
 export default {
   name: 'AiRateGroup',
+  mixins: [PropsOptions],
   props: {
     // 题目索引
     index: {
@@ -31,12 +33,6 @@ export default {
     value: {
       type: Object,
       default: () => ({})
-    },
-    // 评分列表配置
-    // [{ label: '' , value: 0 }]
-    options: {
-      type: Array,
-      default: () => []
     },
     // 标题样式
     titleStyle: {
@@ -72,6 +68,16 @@ export default {
   watch: {
     value: {
       handler(val) {
+        if (!val || JSON.stringify(val) === '{}') {
+          this.checkedMap = this.realOptions.reduce((init, v) => {
+            init[v[this.props.value]] = ''
+
+            return init
+          }, {})
+
+          return
+        }
+
         this.checkedMap = { ...val }
       },
       immediate: true

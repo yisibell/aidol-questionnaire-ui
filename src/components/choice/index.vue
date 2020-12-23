@@ -9,7 +9,7 @@
     <div :class="choiceListClass">
       <div
         :key="i"
-        v-for="(v, i) in options"
+        v-for="(v, i) in realOptions"
         :class="[choiceListItemClass, { 'is-active': isActive(v) }]"
         :style="v.styles"
         @click="toggleChecked(v[props.value])"
@@ -18,7 +18,7 @@
           <div class="ai-choice__list--image__item__wrap__icon">
             <div class="ai-choice__list--image__item__wrap__icon__inner"></div>
           </div>
-          <img :src="v.src" />
+          <img :src="v[props.src]" />
           <div
             v-html="v[props.label]"
             class="ai-choice__list--image__item__wrap__label"
@@ -31,8 +31,10 @@
 </template>
 
 <script>
+import PropsOptions from '@/mixin/props-options'
 export default {
   name: 'AiChoice',
+  mixins: [PropsOptions],
   props: {
     // 题目索引
     index: {
@@ -43,19 +45,6 @@ export default {
     value: {
       type: [Number, String, Array],
       default: () => []
-    },
-    // 选项列表
-    options: {
-      type: Array,
-      default: () => []
-    },
-    // 配置选项
-    props: {
-      type: Object,
-      default: () => ({
-        label: 'label',
-        value: 'value'
-      })
     },
     // 是否多选
     multiple: {
