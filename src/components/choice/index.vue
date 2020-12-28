@@ -20,6 +20,7 @@
           </div>
           <img :src="v[props.src]" />
           <div
+            v-if="v[props.label]"
             v-html="v[props.label]"
             class="ai-choice__list--image__item__wrap__label"
           ></div>
