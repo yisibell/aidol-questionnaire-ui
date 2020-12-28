@@ -4,7 +4,7 @@
       <ai-choice
         v-model="checked"
         :index="1"
-        type="image"
+        type="only-image"
         :options="options"
         title-content="How much are you willing to spend every time when shop clothing online?"
       />

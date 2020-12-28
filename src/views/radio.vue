@@ -20,7 +20,11 @@ export default {
         'Please complete the current question before clicking the next.',
       checked: '',
       options: [
-        { label: '选项文本内容', value: 1 },
+        {
+          label:
+            '选项文本内容fagagggggggggggggggggggggggggggggggggggg hello gg hello world ggggggggg text word ggggggggggggggggggggggggggggggggggggggggggg',
+          value: 1
+        },
         { label: '选项文本内容', value: 2 },
         { label: '选项文本内容', value: 3 },
         { label: '选项文本内容', value: 4 },

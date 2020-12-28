@@ -14,7 +14,7 @@
         :style="v.styles"
         @click="toggleChecked(v[props.value])"
       >
-        <div v-if="type === 'image'" class="ai-choice__list--image__item__wrap">
+        <div v-if="showImage" class="ai-choice__list--image__item__wrap">
           <div class="ai-choice__list--image__item__wrap__icon">
             <div class="ai-choice__list--image__item__wrap__icon__inner"></div>
           </div>
@@ -68,8 +68,9 @@ export default {
       default: ''
     },
     // 答题类型
-    // image 图片
+    // image 文本 + 图片
     // text 普通文本
+    // only-image 仅图片
     type: {
       type: String,
       default: 'text'
@@ -81,6 +82,9 @@ export default {
     }
   },
   computed: {
+    showImage() {
+      return ['image', 'only-image'].includes(this.type)
+    },
     // 是否超出最大选择个数
     isOuter() {
       return (
@@ -97,12 +101,10 @@ export default {
       return parseInt(this.max)
     },
     choiceListClass() {
-      return this.type === 'image'
-        ? 'ai-choice__list--image'
-        : 'ai-choice__list'
+      return this.showImage ? 'ai-choice__list--image' : 'ai-choice__list'
     },
     choiceListItemClass() {
-      return this.type === 'image'
+      return this.showImage
         ? 'ai-choice__list--image__item'
         : 'ai-choice__list__item'
     }

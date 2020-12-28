@@ -31,9 +31,14 @@ export default {
       if (this.autoOptionsIndex) {
         return this.options.map((v, i) => {
           const index_char = createIndex(i, this.optionsIndexSet)
+          const label =
+            this.type !== 'only-image'
+              ? `${index_char}. ${v[this.props.label]}`
+              : ''
+
           return {
             ...v,
-            [this.props.label]: `${index_char}. ${v[this.props.label]}`
+            [this.props.label]: label
           }
         })
       }
