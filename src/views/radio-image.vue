@@ -4,7 +4,7 @@
       <ai-choice
         v-model="checked"
         :index="1"
-        type="only-image"
+        type="image"
         :options="options"
         title-content="How much are you willing to spend every time when shop clothing online?"
       />
@@ -21,7 +21,8 @@ export default {
       checked: '',
       options: [
         {
-          label: '选项文本内容',
+          label:
+            '选项文本内容dfgsagaggagadfsgergagdahahjahrahfhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh',
           value: 1,
           src:
             'https://imgs.veryvoga.com/s330/00/30/20097573b99800c8458c5d34b4560030.jpg'

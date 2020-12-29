@@ -35,23 +35,25 @@
 
     &__item {
       width: 145px;
-      height: 165px;
+      min-height: 165px;
       border-radius: 4px;
       background-color: #F4F4F4;
       margin-bottom: 30px;
       padding: 6px;
       cursor: pointer;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
+      
       &__wrap {
         width: 100%;
         height: 100%;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         
         img {
           display: block;
           width: 100%;
-          height: 100%;
           border-radius: 4px;
           object-fit: contain;
           margin-bottom: 10px;
@@ -77,8 +79,11 @@
         }
 
         &__label {
+          width: 100%;
           text-align: center;
           font-size: 14px;
+          word-break: break-all;
+          word-wrap: break-word;
         }
       }
 
