@@ -4,7 +4,7 @@
       :index="index"
       :style="titleStyle"
       :content="titleContent"
-      :suffix-text="titleSuffixText"
+      :suffix-text="realTitleSuffixText"
     />
     <div :class="choiceListClass">
       <div
@@ -37,6 +37,14 @@ export default {
   name: 'AiChoice',
   mixins: [PropsOptions],
   props: {
+    // 答题类型
+    // image 文本 + 图片
+    // text 普通文本
+    // only-image 仅图片
+    type: {
+      type: String,
+      default: 'text'
+    },
     // 题目索引
     index: {
       type: [Number, String],
@@ -67,13 +75,10 @@ export default {
       type: String,
       default: ''
     },
-    // 答题类型
-    // image 文本 + 图片
-    // text 普通文本
-    // only-image 仅图片
-    type: {
-      type: String,
-      default: 'text'
+    // 自定义标题后缀文本内容
+    titleSuffixText: {
+      type: [String, undefined],
+      default: undefined
     }
   },
   data() {
@@ -93,7 +98,9 @@ export default {
         this.checked.length > this.choiceMax
       )
     },
-    titleSuffixText() {
+    realTitleSuffixText() {
+      if (this.titleSuffixText) return this.titleSuffixText
+
       return this.multiple ? '（Multiple choice）' : '（Single choice）'
     },
     choiceMax() {
