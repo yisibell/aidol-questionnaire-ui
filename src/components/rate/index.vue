@@ -7,8 +7,8 @@
         v-for="v in rateMax"
         class="ai-rate__content__item"
         :class="[
-          { 'is-hover-active': v <= hoverActive && hover_ing },
-          { 'is-active': v <= active && !hover_ing }
+          { 'is-hover-active': v <= hoverActive && hoverIng },
+          { 'is-active': v <= active && !hoverIng }
         ]"
         @mouseover="handleMouseover(v)"
         @mouseout="handleMouseout(v)"
@@ -55,7 +55,7 @@ export default {
     return {
       hoverActive: '',
       active: this.value,
-      hover_ing: false
+      hoverIng: false
     }
   },
   computed: {
@@ -66,7 +66,7 @@ export default {
     rateText() {
       let ac = this.active
 
-      if (this.hover_ing) {
+      if (this.hoverIng) {
         ac = this.hoverActive
       } else {
         ac = this.active
@@ -87,11 +87,11 @@ export default {
   methods: {
     handleMouseover(index) {
       this.hoverActive = index
-      this.hover_ing = true
+      this.hoverIng = true
     },
     handleMouseout(index) {
       this.hoverActive = index
-      this.hover_ing = false
+      this.hoverIng = false
     },
     handleClick(index) {
       this.active = index

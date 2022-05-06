@@ -3,7 +3,7 @@
     <ai-block-tips :message="validMessage">
       <ai-short-answer
         v-model="answer"
-        :index="3"
+        :index="4"
         title-content="What is your fit preference?"
       />
     </ai-block-tips>

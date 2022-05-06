@@ -5547,15 +5547,15 @@ var block_tips_component = normalizeComponent(
 )
 
 /* harmony default export */ var block_tips = (block_tips_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"76a70778-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/rate/index.vue?vue&type=template&id=3ea5ba79&
-var ratevue_type_template_id_3ea5ba79_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ai-rate"},[_c('div',{staticClass:"ai-rate__title"},[_vm._v(_vm._s(_vm.titleContent))]),_c('div',{staticClass:"ai-rate__content"},[_vm._l((_vm.rateMax),function(v){return _c('div',{key:v,staticClass:"ai-rate__content__item",class:[
-        { 'is-hover-active': v <= _vm.hoverActive && _vm.hover_ing },
-        { 'is-active': v <= _vm.active && !_vm.hover_ing }
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"76a70778-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/rate/index.vue?vue&type=template&id=58ae8d1f&
+var ratevue_type_template_id_58ae8d1f_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ai-rate"},[_c('div',{staticClass:"ai-rate__title"},[_vm._v(_vm._s(_vm.titleContent))]),_c('div',{staticClass:"ai-rate__content"},[_vm._l((_vm.rateMax),function(v){return _c('div',{key:v,staticClass:"ai-rate__content__item",class:[
+        { 'is-hover-active': v <= _vm.hoverActive && _vm.hoverIng },
+        { 'is-active': v <= _vm.active && !_vm.hoverIng }
       ],on:{"mouseover":function($event){return _vm.handleMouseover(v)},"mouseout":function($event){return _vm.handleMouseout(v)},"click":function($event){return _vm.handleClick(v)}}},[_vm._v(" "+_vm._s(v)+" ")])}),(_vm.showText)?_c('div',{staticClass:"ai-rate__content__text"},[_vm._v(_vm._s(_vm.rateText))]):_vm._e()],2)])}
-var ratevue_type_template_id_3ea5ba79_staticRenderFns = []
+var ratevue_type_template_id_58ae8d1f_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/rate/index.vue?vue&type=template&id=3ea5ba79&
+// CONCATENATED MODULE: ./src/components/rate/index.vue?vue&type=template&id=58ae8d1f&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/rate/index.vue?vue&type=script&lang=js&
 
@@ -5618,7 +5618,7 @@ var ratevue_type_template_id_3ea5ba79_staticRenderFns = []
     return {
       hoverActive: '',
       active: this.value,
-      hover_ing: false
+      hoverIng: false
     };
   },
   computed: {
@@ -5629,7 +5629,7 @@ var ratevue_type_template_id_3ea5ba79_staticRenderFns = []
     rateText: function rateText() {
       var ac = this.active;
 
-      if (this.hover_ing) {
+      if (this.hoverIng) {
         ac = this.hoverActive;
       } else {
         ac = this.active;
@@ -5649,11 +5649,11 @@ var ratevue_type_template_id_3ea5ba79_staticRenderFns = []
   methods: {
     handleMouseover: function handleMouseover(index) {
       this.hoverActive = index;
-      this.hover_ing = true;
+      this.hoverIng = true;
     },
     handleMouseout: function handleMouseout(index) {
       this.hoverActive = index;
-      this.hover_ing = false;
+      this.hoverIng = false;
     },
     handleClick: function handleClick(index) {
       this.active = index;
@@ -5676,8 +5676,8 @@ var ratevue_type_template_id_3ea5ba79_staticRenderFns = []
 
 var rate_component = normalizeComponent(
   components_ratevue_type_script_lang_js_,
-  ratevue_type_template_id_3ea5ba79_render,
-  ratevue_type_template_id_3ea5ba79_staticRenderFns,
+  ratevue_type_template_id_58ae8d1f_render,
+  ratevue_type_template_id_58ae8d1f_staticRenderFns,
   false,
   null,
   null,

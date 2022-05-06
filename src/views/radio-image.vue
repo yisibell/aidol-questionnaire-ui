@@ -3,7 +3,7 @@
     <ai-block-tips :message="validMessage">
       <ai-choice
         v-model="checked"
-        :index="1"
+        :index="2"
         type="image"
         :options="options"
         title-content="How much are you willing to spend every time when shop clothing online?"

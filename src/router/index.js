@@ -17,11 +17,7 @@ const routes = [
   {
     path: '/checkbox',
     name: 'Checkbox',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ '@/views/checkbox.vue')
+    component: () => import('@/views/checkbox.vue')
   },
   {
     path: '/short-answer',
@@ -32,6 +28,11 @@ const routes = [
     path: '/rate',
     name: 'Rate',
     component: () => import('@/views/rate')
+  },
+  {
+    path: '/rate-group',
+    name: 'RateGroup',
+    component: () => import('@/views/rate-group')
   },
   {
     path: '/radio-image',

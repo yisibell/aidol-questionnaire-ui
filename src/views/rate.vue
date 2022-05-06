@@ -1,13 +1,12 @@
 <template>
   <div>
-    <ai-block-tips :message="validMessage">
-      <ai-rate-group
-        v-model="answer"
-        :index="4"
-        title-content="What is your fit preference?What is your fit preference?What is your fit preference?What is your fit preference?What is your fit preference?What is your fit preference?"
-        :options="options"
-      />
-    </ai-block-tips>
+    <ai-rate
+      v-model="answer"
+      title-content="What is your fit preference? What is your fit preference?What is your fit preference?"
+      :max="5"
+      show-text
+      :texts="texts"
+    />
   </div>
 </template>
 
@@ -17,16 +16,8 @@ export default {
     return {
       validMessage:
         'Please complete the current question before clicking the next.',
-      answer: {},
-      options: [
-        {
-          label:
-            'Your title?Your title?Your title?Your title?Your title?Your title?Your title?Your title?Your title?Your title?Your title?',
-          value: 0
-        },
-        { label: 'Your title?', value: 1 },
-        { label: 'Your title?', value: 2 }
-      ]
+      answer: '',
+      texts: ['很失望', '', '满意', '较满意', '非常满意']
     }
   }
 }
