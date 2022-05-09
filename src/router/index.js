@@ -38,6 +38,11 @@ const routes = [
     path: '/radio-image',
     name: 'RadioImage',
     component: () => import('@/views/radio-image')
+  },
+  {
+    path: '/custom-rate',
+    name: 'CustomRate',
+    component: () => import('@/views/custom-rate')
   }
 ]
 
