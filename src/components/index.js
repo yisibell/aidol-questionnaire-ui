@@ -4,11 +4,12 @@ import AiShortAnswer from './short-answer'
 import AiBlockTips from './block-tips'
 import AiRate from './rate'
 import AiRateGroup from './rate-group'
+import AiCustomRate from './custom-rate'
 
 import '@/styles/index.scss'
 
 function install(Vue) {
-  ;[AiChoice, AiTitle, AiShortAnswer, AiBlockTips, AiRate, AiRateGroup].forEach(
+  ;[AiChoice, AiTitle, AiShortAnswer, AiBlockTips, AiRate, AiRateGroup, AiCustomRate].forEach(
     v => {
       Vue.component(v.name, v)
     }
@@ -22,5 +23,6 @@ export default {
   AiShortAnswer,
   AiBlockTips,
   AiRate,
-  AiRateGroup
+  AiRateGroup,
+  AiCustomRate
 }

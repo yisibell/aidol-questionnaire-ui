@@ -6,7 +6,8 @@
       <router-link to="/checkbox">多选题</router-link> |
       <router-link to="/short-answer">简答题</router-link> |
       <router-link to="/rate">量表题</router-link> |
-      <router-link to="/rate-group">量表题组</router-link>
+      <router-link to="/rate-group">量表题组</router-link> |
+      <router-link to="/custom-rate">自定义量表题</router-link>
     </div>
 
     <div id="app-main">

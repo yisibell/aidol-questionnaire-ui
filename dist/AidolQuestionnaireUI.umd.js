@@ -5817,6 +5817,141 @@ var rate_group_component = normalizeComponent(
 )
 
 /* harmony default export */ var rate_group = (rate_group_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"76a70778-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/custom-rate/index.vue?vue&type=template&id=4926533f&
+var custom_ratevue_type_template_id_4926533f_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ai-rate"},[_c('div',{staticClass:"ai-rate__title"},[_vm._v(_vm._s(_vm.titleContent))]),_c('div',{staticClass:"ai-rate__content"},[_vm._l((_vm.options),function(v,i){return _c('div',{key:v,staticClass:"ai-rate__content__item",class:[
+        { 'is-hover-active': i <= _vm.hoverActive && _vm.hovering },
+        { 'is-active':i <= _vm.active && !_vm.hovering }
+      ],on:{"mouseover":function($event){return _vm.handleMouseover(i)},"mouseout":function($event){return _vm.handleMouseout(i)},"click":function($event){return _vm.handleClick(i)}}},[_vm._v(" "+_vm._s(v)+" ")])}),(_vm.showText)?_c('div',{staticClass:"ai-rate__content__text"},[_vm._v(_vm._s(_vm.rateText))]):_vm._e()],2)])}
+var custom_ratevue_type_template_id_4926533f_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/custom-rate/index.vue?vue&type=template&id=4926533f&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/custom-rate/index.vue?vue&type=script&lang=js&
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ var custom_ratevue_type_script_lang_js_ = ({
+  name: 'AiCustomRate',
+  props: {
+    // 双绑值
+    value: {
+      type: [Number, String],
+      default: ''
+    },
+    // 标题
+    titleContent: {
+      type: String,
+      default: ''
+    },
+    // 是否显示辅助文字，若为真，则会从 texts 数组中选取当前分数对应的文字内容
+    showText: {
+      type: Boolean,
+      default: false
+    },
+    // 选项数组
+    options: {
+      type: Array,
+      default: function _default() {
+        return [];
+      }
+    },
+    // 辅助文字数组
+    texts: {
+      type: Array,
+      default: function _default() {
+        return [];
+      }
+    }
+  },
+  data: function data() {
+    return {
+      hoverActive: -1,
+      active: this.options.indexOf(String(this.value)),
+      hovering: false
+    };
+  },
+  computed: {
+    rateText: function rateText() {
+      var ac = this.active;
+
+      if (this.hovering) {
+        ac = this.hoverActive;
+      } else {
+        ac = this.active;
+      }
+
+      return this.texts[ac] || '';
+    }
+  },
+  watch: {
+    value: {
+      handler: function handler(val) {
+        this.active = this.options.indexOf(String(val));
+      }
+    }
+  },
+  methods: {
+    handleMouseover: function handleMouseover(index) {
+      this.hoverActive = index;
+      this.hovering = true;
+    },
+    handleMouseout: function handleMouseout(index) {
+      this.hoverActive = index;
+      this.hovering = false;
+    },
+    handleClick: function handleClick(index) {
+      this.active = index;
+      this.handleInput();
+    },
+    handleInput: function handleInput() {
+      this.$emit('input', this.options[this.active] || '');
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/custom-rate/index.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_custom_ratevue_type_script_lang_js_ = (custom_ratevue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/custom-rate/index.vue
+
+
+
+
+
+/* normalize component */
+
+var custom_rate_component = normalizeComponent(
+  components_custom_ratevue_type_script_lang_js_,
+  custom_ratevue_type_template_id_4926533f_render,
+  custom_ratevue_type_template_id_4926533f_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var custom_rate = (custom_rate_component.exports);
 // EXTERNAL MODULE: ./src/styles/index.scss
 var styles = __webpack_require__("b20f");
 
@@ -5832,9 +5967,10 @@ var styles = __webpack_require__("b20f");
 
 
 
+
 function install(Vue) {
   ;
-  [choice, title, short_answer, block_tips, rate, rate_group].forEach(function (v) {
+  [choice, title, short_answer, block_tips, rate, rate_group, custom_rate].forEach(function (v) {
     Vue.component(v.name, v);
   });
 }
@@ -5846,7 +5982,8 @@ function install(Vue) {
   AiShortAnswer: short_answer,
   AiBlockTips: block_tips,
   AiRate: rate,
-  AiRateGroup: rate_group
+  AiRateGroup: rate_group,
+  AiCustomRate: custom_rate
 });
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
