@@ -5808,18 +5808,21 @@ var rate_group_component = normalizeComponent(
 )
 
 /* harmony default export */ var rate_group = (rate_group_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"76a70778-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/custom-rate/index.vue?vue&type=template&id=d17b08ce&
-var custom_ratevue_type_template_id_d17b08ce_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ai-rate"},[_c('div',{staticClass:"ai-rate__title"},[_vm._v(_vm._s(_vm.titleContent))]),_c('div',{staticClass:"ai-rate__content"},[_vm._l((_vm.options),function(v,i){return _c('div',{key:v,staticClass:"ai-rate__content__item",class:[
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"76a70778-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/custom-rate/index.vue?vue&type=template&id=f9615850&
+var custom_ratevue_type_template_id_f9615850_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ai-rate ai-custom-rate"},[_c('div',{staticClass:"ai-custom-rate__title"},[_c('ai-title',{style:(_vm.titleStyle),attrs:{"index":_vm.index,"content":_vm.titleContent}})],1),_c('div',{staticClass:"ai-rate__content ai-custom-rate_content"},[_vm._l((_vm.options),function(v,i){return _c('div',{key:i,staticClass:"ai-rate__content__item",class:[
         { 'is-hover-active': i <= _vm.hoverActive && _vm.hovering },
         { 'is-active': i <= _vm.active && !_vm.hovering }
-      ],on:{"mouseover":function($event){return _vm.handleMouseover(i)},"mouseout":function($event){return _vm.handleMouseout(i)},"click":function($event){return _vm.handleClick(i)}}},[_vm._v(" "+_vm._s(v)+" ")])}),(_vm.showText)?_c('div',{staticClass:"ai-rate__content__text"},[_vm._v(_vm._s(_vm.rateText))]):_vm._e()],2)])}
-var custom_ratevue_type_template_id_d17b08ce_staticRenderFns = []
+      ],on:{"mouseover":function($event){return _vm.handleMouseover(i)},"mouseout":function($event){return _vm.handleMouseout(i)},"click":function($event){return _vm.handleClick(i)}}},[_vm._v(" "+_vm._s(v.label)+" ")])}),(_vm.showText)?_c('div',{staticClass:"ai-rate__content__text"},[_vm._v(_vm._s(_vm.rateText))]):_vm._e()],2)])}
+var custom_ratevue_type_template_id_f9615850_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/custom-rate/index.vue?vue&type=template&id=d17b08ce&
+// CONCATENATED MODULE: ./src/components/custom-rate/index.vue?vue&type=template&id=f9615850&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/custom-rate/index.vue?vue&type=script&lang=js&
 
+
+//
+//
 //
 //
 //
@@ -5856,6 +5859,11 @@ var custom_ratevue_type_template_id_d17b08ce_staticRenderFns = []
       type: String,
       default: ''
     },
+    // 题目索引
+    index: {
+      type: [Number, String],
+      default: ''
+    },
     // 是否显示辅助文字，若为真，则会从 texts 数组中选取当前分数对应的文字内容
     showText: {
       type: Boolean,
@@ -5879,7 +5887,9 @@ var custom_ratevue_type_template_id_d17b08ce_staticRenderFns = []
   data: function data() {
     return {
       hoverActive: -1,
-      active: this.options.indexOf(String(this.value)),
+      active: this.options.map(function (v) {
+        return String(v.value);
+      }).indexOf(String(this.value)),
       hovering: false
     };
   },
@@ -5899,7 +5909,9 @@ var custom_ratevue_type_template_id_d17b08ce_staticRenderFns = []
   watch: {
     value: {
       handler: function handler(val) {
-        this.active = this.options.indexOf(String(val));
+        this.active = this.options.map(function (v) {
+          return String(v.value);
+        }).indexOf(String(val));
       }
     }
   },
@@ -5917,7 +5929,9 @@ var custom_ratevue_type_template_id_d17b08ce_staticRenderFns = []
       this.handleInput();
     },
     handleInput: function handleInput() {
-      this.$emit('input', this.options[this.active] || '');
+      var _this$options$this$ac;
+
+      this.$emit('input', ((_this$options$this$ac = this.options[this.active]) === null || _this$options$this$ac === void 0 ? void 0 : _this$options$this$ac.value) || '');
     }
   }
 });
@@ -5933,8 +5947,8 @@ var custom_ratevue_type_template_id_d17b08ce_staticRenderFns = []
 
 var custom_rate_component = normalizeComponent(
   components_custom_ratevue_type_script_lang_js_,
-  custom_ratevue_type_template_id_d17b08ce_render,
-  custom_ratevue_type_template_id_d17b08ce_staticRenderFns,
+  custom_ratevue_type_template_id_f9615850_render,
+  custom_ratevue_type_template_id_f9615850_staticRenderFns,
   false,
   null,
   null,
