@@ -8,13 +8,13 @@
         class="ai-rate__content__item"
         :class="[
           { 'is-hover-active': i <= hoverActive && hovering },
-          { 'is-active':i <= active && !hovering }
+          { 'is-active': i <= active && !hovering }
         ]"
         @mouseover="handleMouseover(i)"
         @mouseout="handleMouseout(i)"
         @click="handleClick(i)"
       >
-        {{ v }}
+        {{ v.label }}
       </div>
       <div v-if="showText" class="ai-rate__content__text">{{ rateText }}</div>
     </div>
@@ -54,7 +54,9 @@ export default {
   data() {
     return {
       hoverActive: -1,
-      active: this.options.indexOf(String(this.value)),
+      active: this.options
+        .map(v => String(v.value))
+        .indexOf(String(this.value)),
       hovering: false
     }
   },
@@ -72,7 +74,9 @@ export default {
   watch: {
     value: {
       handler(val) {
-        this.active = this.options.indexOf(String(val))
+        this.active = this.options
+          .map(v => String(v.value))
+          .indexOf(String(val))
       }
     }
   },
@@ -90,7 +94,7 @@ export default {
       this.handleInput()
     },
     handleInput() {
-      this.$emit('input', this.options[this.active] || '')
+      this.$emit('input', this.options[this.active]?.value || '')
     }
   }
 }
