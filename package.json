@@ -1,7 +1,7 @@
 {
   "name": "@aidol/questionnaire-ui",
   "description": "A questionnaire survey ui library for Vue.js.",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "main": "dist/AidolQuestionnaireUI.umd.min.js",
   "author": {
     "name": "elenh",

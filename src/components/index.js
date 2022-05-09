@@ -9,11 +9,17 @@ import AiCustomRate from './custom-rate'
 import '@/styles/index.scss'
 
 function install(Vue) {
-  ;[AiChoice, AiTitle, AiShortAnswer, AiBlockTips, AiRate, AiRateGroup, AiCustomRate].forEach(
-    v => {
-      Vue.component(v.name, v)
-    }
-  )
+  ;[
+    AiChoice,
+    AiTitle,
+    AiShortAnswer,
+    AiBlockTips,
+    AiRate,
+    AiRateGroup,
+    AiCustomRate
+  ].forEach(v => {
+    Vue.component(v.name, v)
+  })
 }
 
 export default {

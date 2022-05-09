@@ -8,7 +8,7 @@
         class="ai-rate__content__item"
         :class="[
           { 'is-hover-active': i <= hoverActive && hovering },
-          { 'is-active':i <= active && !hovering }
+          { 'is-active': i <= active && !hovering }
         ]"
         @mouseover="handleMouseover(i)"
         @mouseout="handleMouseout(i)"
