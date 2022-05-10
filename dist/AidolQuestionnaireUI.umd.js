@@ -5279,17 +5279,15 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var choice = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"76a70778-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/title/index.vue?vue&type=template&id=e88fa6ea&
-var titlevue_type_template_id_e88fa6ea_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ai-title"},[_vm._t("default",function(){return [_c('span',[_vm._v(_vm._s(_vm.index))]),_c('span',[_vm._v(". ")]),_c('span',[_vm._v(_vm._s(_vm.content))]),_c('span',{staticClass:"ai-title__suffix-text"},[_vm._v(_vm._s(_vm.suffixText))])]},{"index":_vm.index})],2)}
-var titlevue_type_template_id_e88fa6ea_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"76a70778-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/title/index.vue?vue&type=template&id=5c64a07e&
+var titlevue_type_template_id_5c64a07e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ai-title"},[_c('span',[_vm._v(_vm._s(_vm.index))]),_c('span',[_vm._v(". ")]),_c('span',[_vm._v(_vm._s(_vm.content))]),_c('span',{staticClass:"ai-title__suffix-text"},[_vm._v(_vm._s(_vm.suffixText))])])}
+var titlevue_type_template_id_5c64a07e_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/title/index.vue?vue&type=template&id=e88fa6ea&
+// CONCATENATED MODULE: ./src/components/title/index.vue?vue&type=template&id=5c64a07e&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/title/index.vue?vue&type=script&lang=js&
 
-//
-//
 //
 //
 //
@@ -5331,8 +5329,8 @@ var titlevue_type_template_id_e88fa6ea_staticRenderFns = []
 
 var title_component = normalizeComponent(
   components_titlevue_type_script_lang_js_,
-  titlevue_type_template_id_e88fa6ea_render,
-  titlevue_type_template_id_e88fa6ea_staticRenderFns,
+  titlevue_type_template_id_5c64a07e_render,
+  titlevue_type_template_id_5c64a07e_staticRenderFns,
   false,
   null,
   null,
@@ -5341,19 +5339,15 @@ var title_component = normalizeComponent(
 )
 
 /* harmony default export */ var title = (title_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"76a70778-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/short-answer/index.vue?vue&type=template&id=39001c73&
-var short_answervue_type_template_id_39001c73_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ai-short-answer"},[_c('ai-title',{style:(_vm.titleStyle),attrs:{"index":_vm.index,"content":_vm.titleContent}}),_c('div',{staticClass:"ai-short-answer__content"},[_c('textarea',{staticClass:"ai-short-answer__content__inner",attrs:{"placeholder":_vm.placeholder,"autocomplete":_vm.autocomplete,"cols":_vm.cols,"rows":_vm.rows,"maxlength":_vm.maxlength,"disabled":_vm.disabled,"readonly":_vm.readonly,"resize":_vm.resize},domProps:{"value":_vm.textValue},on:{"input":_vm.handleInput,"change":_vm.handleChange,"focus":_vm.handleFocus,"blur":_vm.handleBlur}})])],1)}
-var short_answervue_type_template_id_39001c73_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"76a70778-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/short-answer/index.vue?vue&type=template&id=5eedeb7e&
+var short_answervue_type_template_id_5eedeb7e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ai-short-answer"},[_c('ai-title',{style:(_vm.titleStyle),attrs:{"index":_vm.index,"content":_vm.titleContent}}),_c('div',{staticClass:"ai-short-answer__content"},[_c('textarea',{staticClass:"ai-short-answer__content__inner",attrs:{"placeholder":_vm.placeholder,"autocomplete":_vm.autocomplete,"cols":_vm.cols,"rows":_vm.rows,"maxlength":_vm.maxlength,"disabled":_vm.disabled,"readonly":_vm.readonly,"resize":_vm.resize},domProps:{"value":_vm.textValue},on:{"input":_vm.handleInput,"change":_vm.handleChange,"focus":_vm.handleFocus,"blur":_vm.handleBlur}})])],1)}
+var short_answervue_type_template_id_5eedeb7e_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/short-answer/index.vue?vue&type=template&id=39001c73&
+// CONCATENATED MODULE: ./src/components/short-answer/index.vue?vue&type=template&id=5eedeb7e&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/short-answer/index.vue?vue&type=script&lang=js&
 
-//
-//
-//
-//
 //
 //
 //
@@ -5477,8 +5471,8 @@ var short_answervue_type_template_id_39001c73_staticRenderFns = []
 
 var short_answer_component = normalizeComponent(
   components_short_answervue_type_script_lang_js_,
-  short_answervue_type_template_id_39001c73_render,
-  short_answervue_type_template_id_39001c73_staticRenderFns,
+  short_answervue_type_template_id_5eedeb7e_render,
+  short_answervue_type_template_id_5eedeb7e_staticRenderFns,
   false,
   null,
   null,

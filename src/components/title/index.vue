@@ -1,11 +1,9 @@
 <template>
   <div class="ai-title">
-    <slot name="default" :index="index">
-      <span>{{ index }}</span>
-      <span>. </span>
-      <span>{{ content }}</span>
-      <span class="ai-title__suffix-text">{{ suffixText }}</span>
-    </slot>
+    <span>{{ index }}</span>
+    <span>. </span>
+    <span>{{ content }}</span>
+    <span class="ai-title__suffix-text">{{ suffixText }}</span>
   </div>
 </template>
 
