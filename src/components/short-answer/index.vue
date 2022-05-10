@@ -1,10 +1,6 @@
 <template>
   <div class="ai-short-answer">
-    <ai-title
-      :style="titleStyle"
-      :index="index"
-      :content="titleContent"
-    ></ai-title>
+    <ai-title :style="titleStyle" :index="index" :content="titleContent" />
     <div class="ai-short-answer__content">
       <textarea
         class="ai-short-answer__content__inner"

@@ -28,7 +28,7 @@ export default {
         { label: '20', value: '20' },
         { label: '30', value: '30' },
         { label: '80', value: '80' },
-        { label: '100', value: '100' }
+        { label: '10000000', value: '10000000' }
       ],
       texts: ['很失望', '一般般', '较满意', '满意', '非常满意']
     }

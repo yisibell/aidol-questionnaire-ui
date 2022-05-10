@@ -8,5 +8,10 @@
 
   &__content {
     margin-bottom: 15px;
+
+    &__item {
+      width: auto;
+      padding: 0 10px;
+    }
   }
 }

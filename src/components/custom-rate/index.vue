@@ -7,7 +7,7 @@
       <div
         :key="i"
         v-for="(v, i) in options"
-        class="ai-rate__content__item"
+        class="ai-rate__content__item ai-custom-rate__content__item"
         :class="[
           { 'is-hover-active': i <= hoverActive && hovering },
           { 'is-active': i <= active && !hovering }
