@@ -6,6 +6,8 @@
         title-content="What is your fit preference? What is your fit preference?What is your fit preference?"
         :index="7"
         show-text
+        :image="image"
+        :collect-reason="collect_reason"
         :options="options"
         :texts="texts"
       />
@@ -30,7 +32,19 @@ export default {
         { label: '80', value: '80' },
         { label: '10000000', value: '10000000' }
       ],
-      texts: ['很失望', '一般般', '较满意', '满意', '非常满意']
+      texts: ['很失望', '一般般', '较满意', '满意', '非常满意'],
+      image: {
+        src:
+          'https://imgs.veryvoga.com/s330/a7/cc/10d1a8173eb551c214fa99aacef0a7cc.jpg',
+        container_style: {
+          'background-color': '#e8e8e8',
+          padding: '5px 0 5px 0',
+          'text-align': 'center'
+        },
+        style: {
+          width: '600px'
+        }
+      }
     }
   },
   methods: {

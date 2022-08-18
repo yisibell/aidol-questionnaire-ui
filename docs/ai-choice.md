@@ -18,3 +18,5 @@
 | `optionsIndexSet` | 自动生成待选项索引标识符时的匹配列表 | `Array` | - | `['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']` |
 | `options` | 待选项列表 | `Array of Object` | - | `[]` |
 | `props` | 配置选项 | `Object` | - | 见 <a href="./props.md">props</a> 配置 |
+| `collectReason`| 是否收集作答原因 | `Boolean` | - | `false` |
+| `image` | 问题图片配置选项 | `Object` | - | 见<a href="./image.md">image</a>配置 |

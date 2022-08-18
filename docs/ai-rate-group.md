@@ -15,3 +15,5 @@
 | `titleStyle` | 定义标题的样式，同 `vue` 中的 `style` prop | `Object/Array` | - | - |
 | `titleContent` | 标题的内容 | `String` | - | - |
 | `props` | 配置选项 | `Object` | - | 见 <a href="./props.md">props</a> |
+| `collectReason`| 是否收集作答原因 | `Boolean` | - | `false` |
+| `image` | 问题图片配置选项 | `Object` | - | 见<a href="./image.md">image</a>配置 |

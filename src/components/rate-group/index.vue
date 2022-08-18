@@ -3,6 +3,9 @@
     <div class="ai-rate-group__title">
       <ai-title :style="titleStyle" :index="index" :content="titleContent" />
     </div>
+    <div v-if="image && image.src" :style="image.container_style || {}">
+      <img :src="image.src" :style="image.style" class="ai-rate-group__image" />
+    </div>
     <div class="ai-rate-group__list">
       <ai-rate
         :key="i"
@@ -14,6 +17,12 @@
         :texts="texts"
         @input="handleInput"
       />
+    </div>
+    <div v-if="collectReason" class="ai-answer-reason">
+      <span class="ai-answer-reason__title">
+        Tell us the reason for your option(Optional)
+      </span>
+      <textarea class="ai-answer-reason__content"></textarea>
     </div>
   </div>
 </template>
@@ -58,6 +67,16 @@ export default {
     texts: {
       type: Array,
       default: () => []
+    },
+    // 图片配置
+    image: {
+      type: Object,
+      default: () => ({})
+    },
+    // 是否收集作答原因
+    collectReason: {
+      type: [Boolean, Number],
+      default: false
     }
   },
   data() {
