@@ -1,6 +1,13 @@
 <template>
   <div class="ai-short-answer">
     <ai-title :style="titleStyle" :index="index" :content="titleContent" />
+    <div v-if="image && image.src" :style="image.container_style || {}">
+      <img
+        :src="image.src"
+        :style="image.style"
+        class="ai-short-answer__image"
+      />
+    </div>
     <div class="ai-short-answer__content">
       <textarea
         class="ai-short-answer__content__inner"
@@ -79,6 +86,11 @@ export default {
     resize: {
       type: String,
       default: 'inherit'
+    },
+    // 图片配置
+    image: {
+      type: Object,
+      default: () => ({})
     }
   },
   data() {

@@ -5,6 +5,8 @@
         v-model="checked"
         :index="2"
         type="image"
+        :image="image"
+        :collect-reason="collect_reason"
         :options="options"
         title-content="How much are you willing to spend every time when shop clothing online?"
       />
@@ -51,7 +53,20 @@ export default {
           src:
             'https://imgs.veryvoga.com/s330/3f/19/010a444ebc99204dd3519e5caeec3f19.jpg'
         }
-      ]
+      ],
+      collect_reason: true,
+      image: {
+        src:
+          'https://imgs.veryvoga.com/s330/a7/cc/10d1a8173eb551c214fa99aacef0a7cc.jpg',
+        container_style: {
+          'background-color': '#e8e8e8',
+          padding: '5px 0 5px 0',
+          'text-align': 'center'
+        },
+        style: {
+          width: '600px'
+        }
+      }
     }
   }
 }

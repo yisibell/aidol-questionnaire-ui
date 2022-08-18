@@ -3,6 +3,13 @@
     <div class="ai-custom-rate__title">
       <ai-title :style="titleStyle" :index="index" :content="titleContent" />
     </div>
+    <div v-if="image && image.src" :style="image.container_style || {}">
+      <img
+        :src="image.src"
+        :style="image.style"
+        class="ai-custom-rate__image"
+      />
+    </div>
     <div class="ai-rate__content ai-custom-rate_content">
       <div
         :key="i"
@@ -19,6 +26,12 @@
         {{ v.label }}
       </div>
       <div v-if="showText" class="ai-rate__content__text">{{ rateText }}</div>
+    </div>
+    <div v-if="collectReason" class="ai-answer-reason">
+      <span class="ai-answer-reason__title">
+        Tell us the reason for your option(Optional)
+      </span>
+      <textarea class="ai-answer-reason__content"></textarea>
     </div>
   </div>
 </template>
@@ -56,6 +69,14 @@ export default {
     texts: {
       type: Array,
       default: () => []
+    },
+    image: {
+      type: Object,
+      default: () => ({})
+    },
+    collectReason: {
+      type: [Boolean, Number],
+      default: false
     }
   },
   data() {

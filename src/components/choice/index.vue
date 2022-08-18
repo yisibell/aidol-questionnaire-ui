@@ -6,6 +6,9 @@
       :content="titleContent"
       :suffix-text="realTitleSuffixText"
     />
+    <div v-if="image && image.src" :style="image.container_style || {}">
+      <img :src="image.src" :style="image.style" class="ai-choice__image" />
+    </div>
     <div :class="choiceListClass">
       <div
         :key="i"
@@ -27,6 +30,12 @@
         </div>
         <div v-else v-html="v[props.label]"></div>
       </div>
+    </div>
+    <div v-if="collectReason" class="ai-answer-reason">
+      <span class="ai-answer-reason__title">
+        Tell us the reason for your option(Optional)
+      </span>
+      <textarea class="ai-answer-reason__content"></textarea>
     </div>
   </div>
 </template>
@@ -79,6 +88,14 @@ export default {
     titleSuffixText: {
       type: [String, undefined],
       default: undefined
+    },
+    image: {
+      type: Object,
+      default: () => ({})
+    },
+    collectReason: {
+      type: [Boolean, Number],
+      default: false
     }
   },
   data() {
