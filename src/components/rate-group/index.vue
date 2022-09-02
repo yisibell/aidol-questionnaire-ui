@@ -20,7 +20,7 @@
     </div>
     <div v-if="collectReason" class="ai-answer-reason">
       <span class="ai-answer-reason__title">
-        Tell us the reason for your option(Optional)
+        Tell us the reason for your score(Optional)
       </span>
       <textarea class="ai-answer-reason__content"></textarea>
     </div>
