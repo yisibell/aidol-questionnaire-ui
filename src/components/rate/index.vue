@@ -1,10 +1,10 @@
 <template>
   <div class="ai-rate">
-    <div class="ai-rate__title">{{ titleContent }}</div>
+    <div class="ai-rate__title" :style="titleStyle">{{ titleContent }}</div>
     <div v-if="image && image.src" :style="image.container_style || {}">
       <img :src="image.src" :style="image.style" class="ai-rate__image" />
     </div>
-    <div class="ai-rate__content">
+    <div class="ai-rate__content" :style="optionStyle">
       <div
         :key="v"
         v-for="v in rateMax"
@@ -19,10 +19,12 @@
       >
         {{ v }}
       </div>
-      <div v-if="showText" class="ai-rate__content__text">{{ rateText }}</div>
+      <div v-if="showText" class="ai-rate__content__text" :style="optionStyle">
+        {{ rateText }}
+      </div>
     </div>
     <div v-if="collectReason" class="ai-answer-reason">
-      <span class="ai-answer-reason__title">
+      <span class="ai-answer-reason__title" :style="reasonStyle">
         Tell us the reason for your score(Optional)
       </span>
       <textarea class="ai-answer-reason__content"></textarea>
@@ -43,6 +45,21 @@ export default {
     titleContent: {
       type: String,
       default: ''
+    },
+    // 标题样式
+    titleStyle: {
+      type: [Object, Array, undefined],
+      default: undefined
+    },
+    // 选项样式
+    optionStyle: {
+      type: [Object, Array, undefined],
+      default: undefined
+    },
+    // 作答原因样式
+    reasonStyle: {
+      type: [Object, Array, undefined],
+      default: undefined
     },
     // 最大值
     max: {

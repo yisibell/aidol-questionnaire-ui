@@ -1,8 +1,8 @@
 .ai-rate {
 
   .active {
-    background-color: #B9E8FF;
-    border: 1px solid #B9E8FF;
+    background-color: var(--choice-bg-color-active, $--choice-bg-color-active);
+    border: 1px solid var(--choice-bg-color-active, $--choice-bg-color-active);
   }
 
   &__title {

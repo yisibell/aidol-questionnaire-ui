@@ -6,6 +6,9 @@
       :image="image"
       :collect-reason="collect_reason"
       multiple
+      :title-style="titleStyle"
+      :option-style="optionStyle"
+      :reason-style="reasonStyle"
       :options="options"
       :max="2"
       title-content="What kind of sale promotions do you prefer? (multiple choice)"
@@ -14,6 +17,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'Checkbox',
   data() {
@@ -38,6 +42,17 @@ export default {
         style: {
           width: '600px'
         }
+      },
+      titleStyle: {
+        color: 'red'
+      },
+      optionStyle: {
+        color: 'green',
+        'font-size': '14px'
+      },
+      reasonStyle: {
+        color: 'yellow',
+        'font-size': '14px'
       }
     }
   }

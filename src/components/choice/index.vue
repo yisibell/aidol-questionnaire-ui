@@ -14,7 +14,7 @@
         :key="i"
         v-for="(v, i) in realOptions"
         :class="[choiceListItemClass, { 'is-active': isActive(v) }]"
-        :style="v.styles"
+        :style="{ ...v.styles, ...(optionStyle || {}) }"
         @click="toggleChecked(v[props.value])"
       >
         <div v-if="showImage" class="ai-choice__list--image__item__wrap">
@@ -32,7 +32,7 @@
       </div>
     </div>
     <div v-if="collectReason" class="ai-answer-reason">
-      <span class="ai-answer-reason__title">
+      <span class="ai-answer-reason__title" :style="reasonStyle">
         Tell us the reason for your option(Optional)
       </span>
       <textarea class="ai-answer-reason__content"></textarea>
@@ -87,6 +87,16 @@ export default {
     // 自定义标题后缀文本内容
     titleSuffixText: {
       type: [String, undefined],
+      default: undefined
+    },
+    // 选项样式
+    optionStyle: {
+      type: [Object, Array, undefined],
+      default: undefined
+    },
+    // 作答原因样式
+    reasonStyle: {
+      type: [Object, Array, undefined],
       default: undefined
     },
     image: {

@@ -12,6 +12,8 @@
         v-for="(v, i) in realOptions"
         v-model="checkedMap[v[props.value]]"
         :title-content="v[props.label]"
+        :title-style="optionStyle"
+        :option-style="optionStyle"
         :max="max"
         :show-text="showText"
         :texts="texts"
@@ -19,7 +21,7 @@
       />
     </div>
     <div v-if="collectReason" class="ai-answer-reason">
-      <span class="ai-answer-reason__title">
+      <span class="ai-answer-reason__title" :style="reasonStyle">
         Tell us the reason for your score(Optional)
       </span>
       <textarea class="ai-answer-reason__content"></textarea>
@@ -52,6 +54,16 @@ export default {
     titleContent: {
       type: String,
       default: ''
+    },
+    // 选项样式
+    optionStyle: {
+      type: [Object, Array, undefined],
+      default: undefined
+    },
+    // 作答原因样式
+    reasonStyle: {
+      type: [Object, Array, undefined],
+      default: undefined
     },
     // 评分最大值
     max: {

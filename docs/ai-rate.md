@@ -13,3 +13,7 @@
 | `texts` | 辅助文字数组 | `Array` | - | `[]` |
 | `collectReason`| 是否收集作答原因 | `Boolean` | - | `false` |
 | `image` | 问题图片配置选项 | `Object` | - | 见<a href="./image.md">image</a>配置 |
+| `titleStyle` | 定义标题的样式，同 `vue` 中的 `style` prop | `Object/Array` | - | - |
+| `optionStyle` | 定义选项的样式，同 `vue` 中的 `style` prop | `Object/Array` | - | - |
+| `reasonStyle` | 定义作答原因的样式，同 `vue` 中的 `style` prop | `Object/Array` | - | - |
+
