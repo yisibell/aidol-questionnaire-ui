@@ -8,6 +8,9 @@
         :image="image"
         :collect-reason="collect_reason"
         title-content="How much are you willing to spend every time when shop clothing online?"
+        :title-style="titleStyle"
+        :option-style="optionStyle"
+        :reason-style="reasonStyle"
       />
     </ai-block-tips>
   </div>
@@ -44,6 +47,17 @@ export default {
         style: {
           width: '400px'
         }
+      },
+      titleStyle: {
+        color: 'red'
+      },
+      optionStyle: {
+        color: 'green',
+        'font-size': '14px'
+      },
+      reasonStyle: {
+        color: 'yellow',
+        'font-size': '14px'
       }
     }
   }

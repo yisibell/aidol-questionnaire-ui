@@ -6,6 +6,7 @@
         :index="4"
         :image="image"
         title-content="What is your fit preference?"
+        :title-style="titleStyle"
       />
     </ai-block-tips>
   </div>
@@ -29,6 +30,9 @@ export default {
         style: {
           width: '600px'
         }
+      },
+      titleStyle: {
+        color: 'red'
       }
     }
   }

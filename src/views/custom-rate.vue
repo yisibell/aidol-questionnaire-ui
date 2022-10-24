@@ -6,6 +6,9 @@
         title-content="What is your fit preference? What is your fit preference?What is your fit preference?"
         :index="7"
         show-text
+        :title-style="titleStyle"
+        :option-style="optionStyle"
+        :reason-style="reasonStyle"
         :image="image"
         :collect-reason="collect_reason"
         :options="options"
@@ -44,6 +47,17 @@ export default {
         style: {
           width: '600px'
         }
+      },
+      titleStyle: {
+        color: 'red'
+      },
+      optionStyle: {
+        color: 'green',
+        'font-size': '14px'
+      },
+      reasonStyle: {
+        color: 'yellow',
+        'font-size': '14px'
       }
     }
   },

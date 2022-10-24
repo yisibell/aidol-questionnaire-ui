@@ -8,6 +8,9 @@
       :image="image"
       :collect-reason="collect_reason"
       :texts="texts"
+      :title-style="titleStyle"
+      :option-style="optionStyle"
+      :reason-style="reasonStyle"
     />
   </div>
 </template>
@@ -20,7 +23,18 @@ export default {
         'Please complete the current question before clicking the next.',
       answer: '',
       texts: ['很失望', '', '满意', '较满意', '非常满意'],
-      collect_reason: true
+      collect_reason: true,
+      titleStyle: {
+        color: 'red'
+      },
+      optionStyle: {
+        color: 'green',
+        'font-size': '14px'
+      },
+      reasonStyle: {
+        color: 'yellow',
+        'font-size': '14px'
+      }
     }
   }
 }

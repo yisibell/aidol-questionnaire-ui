@@ -22,7 +22,7 @@
       word-wrap: break-word;
 
       &.is-active {
-        background-color: $--choice-bg-color-active;
+        background-color: var(--choice-bg-color-active, $--choice-bg-color-active);
         font-size: 16px;
       }
     }

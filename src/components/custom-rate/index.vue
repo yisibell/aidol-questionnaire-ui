@@ -10,7 +10,7 @@
         class="ai-custom-rate__image"
       />
     </div>
-    <div class="ai-rate__content ai-custom-rate_content">
+    <div class="ai-rate__content ai-custom-rate_content" :style="optionStyle">
       <div
         :key="i"
         v-for="(v, i) in options"
@@ -25,10 +25,12 @@
       >
         {{ v.label }}
       </div>
-      <div v-if="showText" class="ai-rate__content__text">{{ rateText }}</div>
+      <div v-if="showText" class="ai-rate__content__text" :style="optionStyle">
+        {{ rateText }}
+      </div>
     </div>
     <div v-if="collectReason" class="ai-answer-reason">
-      <span class="ai-answer-reason__title">
+      <span class="ai-answer-reason__title" :style="reasonStyle">
         Tell us the reason for your score(Optional)
       </span>
       <textarea class="ai-answer-reason__content"></textarea>
@@ -49,6 +51,21 @@ export default {
     titleContent: {
       type: String,
       default: ''
+    },
+    // 标题样式
+    titleStyle: {
+      type: [Object, Array, undefined],
+      default: undefined
+    },
+    // 选项样式
+    optionStyle: {
+      type: [Object, Array, undefined],
+      default: undefined
+    },
+    // 作答原因样式
+    reasonStyle: {
+      type: [Object, Array, undefined],
+      default: undefined
     },
     // 题目索引
     index: {
