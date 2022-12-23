@@ -2,7 +2,7 @@
 
 A questionnaire survey ui library for Vue.js.
 
-see example <a href="https://hongwenqing.com/aidol-questionnaire-ui/" target="_blank"> Example </a>.
+see <a href="https://hongwenqing.com/aidol-questionnaire-ui/" target="_blank"> Example </a> here.
 
 # Installation
 
