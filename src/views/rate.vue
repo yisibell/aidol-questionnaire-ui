@@ -5,7 +5,6 @@
       title-content="What is your fit preference? What is your fit preference?What is your fit preference?"
       :max="5"
       show-text
-      :image="image"
       :collect-reason="collect_reason"
       :texts="texts"
       :title-style="titleStyle"

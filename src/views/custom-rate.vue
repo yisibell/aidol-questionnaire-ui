@@ -25,6 +25,7 @@
 export default {
   data() {
     return {
+      collect_reason: true,
       validMessage:
         'Please complete the current question before clicking the next.',
       answer: '',
