@@ -5,7 +5,7 @@
  * @param {Array} ori 匹配数组
  * @return {any}
  */
-export function createIndex(
+export function createIndex (
   index,
   ori = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
 ) {

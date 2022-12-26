@@ -6,36 +6,55 @@
       :content="titleContent"
       :suffix-text="realTitleSuffixText"
     />
-    <div v-if="image && image.src" :style="image.container_style || {}">
-      <img :src="image.src" :style="image.style" class="ai-choice__image" />
+    <div
+      v-if="image && image.src"
+      :style="image.container_style || {}"
+    >
+      <img
+        :src="image.src"
+        :style="image.style"
+        class="ai-choice__image"
+      >
     </div>
     <div :class="choiceListClass">
       <div
-        :key="i"
         v-for="(v, i) in realOptions"
+        :key="i"
         :class="[choiceListItemClass, { 'is-active': isActive(v) }]"
         :style="{ ...v.styles, ...(optionStyle || {}) }"
         @click="toggleChecked(v[props.value])"
       >
-        <div v-if="showImage" class="ai-choice__list--image__item__wrap">
+        <div
+          v-if="showImage"
+          class="ai-choice__list--image__item__wrap"
+        >
           <div class="ai-choice__list--image__item__wrap__icon">
-            <div class="ai-choice__list--image__item__wrap__icon__inner"></div>
+            <div class="ai-choice__list--image__item__wrap__icon__inner" />
           </div>
-          <img :src="v[props.src]" />
+          <img :src="v[props.src]">
           <div
             v-if="v[props.label]"
-            v-html="v[props.label]"
             class="ai-choice__list--image__item__wrap__label"
-          ></div>
+            v-html="v[props.label]"
+          />
         </div>
-        <div v-else v-html="v[props.label]"></div>
+        <div
+          v-else
+          v-html="v[props.label]"
+        />
       </div>
     </div>
-    <div v-if="collectReason" class="ai-answer-reason">
-      <span class="ai-answer-reason__title" :style="reasonStyle">
+    <div
+      v-if="collectReason"
+      class="ai-answer-reason"
+    >
+      <span
+        class="ai-answer-reason__title"
+        :style="reasonStyle"
+      >
         Tell us the reason for your option(Optional)
       </span>
-      <textarea class="ai-answer-reason__content"></textarea>
+      <textarea class="ai-answer-reason__content" />
     </div>
   </div>
 </template>
@@ -108,36 +127,36 @@ export default {
       default: false
     }
   },
-  data() {
+  data () {
     return {
       checked: ''
     }
   },
   computed: {
-    showImage() {
+    showImage () {
       return ['image', 'only-image'].includes(this.type)
     },
     // 是否超出最大选择个数
-    isOuter() {
+    isOuter () {
       return (
         this.multiple &&
         this.choiceMax > 0 &&
         this.checked.length > this.choiceMax
       )
     },
-    realTitleSuffixText() {
+    realTitleSuffixText () {
       if (this.titleSuffixText) return this.titleSuffixText
 
       return this.multiple ? '（Multiple choice）' : '（Single choice）'
     },
-    choiceMax() {
+    choiceMax () {
       const { parseInt } = Number
       return parseInt(this.max)
     },
-    choiceListClass() {
+    choiceListClass () {
       return this.showImage ? 'ai-choice__list--image' : 'ai-choice__list'
     },
-    choiceListItemClass() {
+    choiceListItemClass () {
       return this.showImage
         ? 'ai-choice__list--image__item'
         : 'ai-choice__list__item'
@@ -145,7 +164,7 @@ export default {
   },
   watch: {
     value: {
-      handler(val) {
+      handler (val) {
         if (this.multiple) {
           this.checked = Array.isArray(val) ? [...val] : []
         } else {
@@ -156,7 +175,7 @@ export default {
     }
   },
   methods: {
-    isActive(v) {
+    isActive (v) {
       const val = v[this.props.value]
       if (this.multiple) {
         return this.checked.includes(val)
@@ -164,7 +183,7 @@ export default {
 
       return this.checked === val
     },
-    toggleChecked(val) {
+    toggleChecked (val) {
       if (this.multiple) {
         const index = this.checked.findIndex(v => v === val)
         if (index >= 0) {

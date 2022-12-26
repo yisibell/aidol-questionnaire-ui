@@ -20,7 +20,7 @@
 <script>
 export default {
   name: 'RadioImage',
-  data() {
+  data () {
     return {
       validMessage: '',
       checked: '',

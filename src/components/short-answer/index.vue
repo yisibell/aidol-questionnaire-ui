@@ -1,12 +1,19 @@
 <template>
   <div class="ai-short-answer">
-    <ai-title :style="titleStyle" :index="index" :content="titleContent" />
-    <div v-if="image && image.src" :style="image.container_style || {}">
+    <ai-title
+      :style="titleStyle"
+      :index="index"
+      :content="titleContent"
+    />
+    <div
+      v-if="image && image.src"
+      :style="image.container_style || {}"
+    >
       <img
         :src="image.src"
         :style="image.style"
         class="ai-short-answer__image"
-      />
+      >
     </div>
     <div class="ai-short-answer__content">
       <textarea
@@ -24,7 +31,7 @@
         @change="handleChange"
         @focus="handleFocus"
         @blur="handleBlur"
-      ></textarea>
+      />
     </div>
   </div>
 </template>
@@ -93,31 +100,31 @@ export default {
       default: () => ({})
     }
   },
-  data() {
+  data () {
     return {
       textValue: ''
     }
   },
   watch: {
     value: {
-      handler(val) {
+      handler (val) {
         this.textValue = val
       },
       immediate: true
     }
   },
   methods: {
-    handleInput(e) {
+    handleInput (e) {
       this.textValue = e.target.value
       this.$emit('input', this.textValue, e)
     },
-    handleChange(e) {
+    handleChange (e) {
       this.$emit('change', this.textValue, e)
     },
-    handleFocus(e) {
+    handleFocus (e) {
       this.$emit('focus', e)
     },
-    handleBlur(e) {
+    handleBlur (e) {
       this.$emit('blur', e)
     }
   }

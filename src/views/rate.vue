@@ -16,7 +16,8 @@
 
 <script>
 export default {
-  data() {
+  name: 'RateDemo',
+  data () {
     return {
       validMessage:
         'Please complete the current question before clicking the next.',

@@ -27,7 +27,7 @@ export default {
     }
   },
   computed: {
-    realOptions() {
+    realOptions () {
       if (this.autoOptionsIndex) {
         return this.options.map((v, i) => {
           const index_char = createIndex(i, this.optionsIndexSet)

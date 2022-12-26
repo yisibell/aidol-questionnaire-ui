@@ -1,13 +1,28 @@
 <template>
   <div class="ai-rate">
-    <div class="ai-rate__title" :style="titleStyle">{{ titleContent }}</div>
-    <div v-if="image && image.src" :style="image.container_style || {}">
-      <img :src="image.src" :style="image.style" class="ai-rate__image" />
+    <div
+      class="ai-rate__title"
+      :style="titleStyle"
+    >
+      {{ titleContent }}
     </div>
-    <div class="ai-rate__content" :style="optionStyle">
+    <div
+      v-if="image && image.src"
+      :style="image.container_style || {}"
+    >
+      <img
+        :src="image.src"
+        :style="image.style"
+        class="ai-rate__image"
+      >
+    </div>
+    <div
+      class="ai-rate__content"
+      :style="optionStyle"
+    >
       <div
-        :key="v"
         v-for="v in rateMax"
+        :key="v"
         class="ai-rate__content__item"
         :class="[
           { 'is-hover-active': v <= hoverActive && hoverIng },
@@ -19,15 +34,25 @@
       >
         {{ v }}
       </div>
-      <div v-if="showText" class="ai-rate__content__text" :style="optionStyle">
+      <div
+        v-if="showText"
+        class="ai-rate__content__text"
+        :style="optionStyle"
+      >
         {{ rateText }}
       </div>
     </div>
-    <div v-if="collectReason" class="ai-answer-reason">
-      <span class="ai-answer-reason__title" :style="reasonStyle">
+    <div
+      v-if="collectReason"
+      class="ai-answer-reason"
+    >
+      <span
+        class="ai-answer-reason__title"
+        :style="reasonStyle"
+      >
         Tell us the reason for your score(Optional)
       </span>
-      <textarea class="ai-answer-reason__content"></textarea>
+      <textarea class="ai-answer-reason__content" />
     </div>
   </div>
 </template>
@@ -85,7 +110,7 @@ export default {
       default: false
     }
   },
-  data() {
+  data () {
     return {
       hoverActive: '',
       active: this.value,
@@ -93,11 +118,11 @@ export default {
     }
   },
   computed: {
-    rateMax() {
+    rateMax () {
       const { parseInt } = Number
       return parseInt(this.max)
     },
-    rateText() {
+    rateText () {
       let ac = this.active
 
       if (this.hoverIng) {
@@ -113,25 +138,25 @@ export default {
   },
   watch: {
     value: {
-      handler(val) {
+      handler (val) {
         this.active = val
       }
     }
   },
   methods: {
-    handleMouseover(index) {
+    handleMouseover (index) {
       this.hoverActive = index
       this.hoverIng = true
     },
-    handleMouseout(index) {
+    handleMouseout (index) {
       this.hoverActive = index
       this.hoverIng = false
     },
-    handleClick(index) {
+    handleClick (index) {
       this.active = index
       this.handleInput()
     },
-    handleInput() {
+    handleInput () {
       this.$emit('input', this.active)
     }
   }

@@ -1,19 +1,29 @@
 <template>
   <div class="ai-rate ai-custom-rate">
     <div class="ai-custom-rate__title">
-      <ai-title :style="titleStyle" :index="index" :content="titleContent" />
+      <ai-title
+        :style="titleStyle"
+        :index="index"
+        :content="titleContent"
+      />
     </div>
-    <div v-if="image && image.src" :style="image.container_style || {}">
+    <div
+      v-if="image && image.src"
+      :style="image.container_style || {}"
+    >
       <img
         :src="image.src"
         :style="image.style"
         class="ai-custom-rate__image"
-      />
+      >
     </div>
-    <div class="ai-rate__content ai-custom-rate_content" :style="optionStyle">
+    <div
+      class="ai-rate__content ai-custom-rate_content"
+      :style="optionStyle"
+    >
       <div
-        :key="i"
         v-for="(v, i) in options"
+        :key="i"
         class="ai-rate__content__item ai-custom-rate__content__item"
         :class="[
           { 'is-hover-active': i <= hoverActive && hovering },
@@ -25,15 +35,25 @@
       >
         {{ v.label }}
       </div>
-      <div v-if="showText" class="ai-rate__content__text" :style="optionStyle">
+      <div
+        v-if="showText"
+        class="ai-rate__content__text"
+        :style="optionStyle"
+      >
         {{ rateText }}
       </div>
     </div>
-    <div v-if="collectReason" class="ai-answer-reason">
-      <span class="ai-answer-reason__title" :style="reasonStyle">
+    <div
+      v-if="collectReason"
+      class="ai-answer-reason"
+    >
+      <span
+        class="ai-answer-reason__title"
+        :style="reasonStyle"
+      >
         Tell us the reason for your score(Optional)
       </span>
-      <textarea class="ai-answer-reason__content"></textarea>
+      <textarea class="ai-answer-reason__content" />
     </div>
   </div>
 </template>
@@ -96,7 +116,7 @@ export default {
       default: false
     }
   },
-  data() {
+  data () {
     return {
       hoverActive: -1,
       active: this.options
@@ -106,7 +126,7 @@ export default {
     }
   },
   computed: {
-    rateText() {
+    rateText () {
       let ac = this.active
       if (this.hovering) {
         ac = this.hoverActive
@@ -118,7 +138,7 @@ export default {
   },
   watch: {
     value: {
-      handler(val) {
+      handler (val) {
         this.active = this.options
           .map(v => String(v.value))
           .indexOf(String(val))
@@ -126,19 +146,19 @@ export default {
     }
   },
   methods: {
-    handleMouseover(index) {
+    handleMouseover (index) {
       this.hoverActive = index
       this.hovering = true
     },
-    handleMouseout(index) {
+    handleMouseout (index) {
       this.hoverActive = index
       this.hovering = false
     },
-    handleClick(index) {
+    handleClick (index) {
       this.active = index
       this.handleInput()
     },
-    handleInput() {
+    handleInput () {
       this.$emit('input', this.options[this.active]?.value || '')
     }
   }

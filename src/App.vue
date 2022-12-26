@@ -1,13 +1,27 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/radio">单选题</router-link> |
-      <router-link to="/radio-image">单选题(带图片)</router-link> |
-      <router-link to="/checkbox">多选题</router-link> |
-      <router-link to="/short-answer">简答题</router-link> |
-      <router-link to="/rate">量表题</router-link> |
-      <router-link to="/rate-group">量表题组</router-link> |
-      <router-link to="/custom-rate">自定义量表题</router-link>
+      <router-link to="/radio">
+        单选题
+      </router-link> |
+      <router-link to="/radio-image">
+        单选题(带图片)
+      </router-link> |
+      <router-link to="/checkbox">
+        多选题
+      </router-link> |
+      <router-link to="/short-answer">
+        简答题
+      </router-link> |
+      <router-link to="/rate">
+        量表题
+      </router-link> |
+      <router-link to="/rate-group">
+        量表题组
+      </router-link> |
+      <router-link to="/custom-rate">
+        自定义量表题
+      </router-link>
     </div>
 
     <div id="app-main">

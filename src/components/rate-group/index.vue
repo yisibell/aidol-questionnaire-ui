@@ -1,15 +1,26 @@
 <template>
   <div class="ai-rate-group">
     <div class="ai-rate-group__title">
-      <ai-title :style="titleStyle" :index="index" :content="titleContent" />
+      <ai-title
+        :style="titleStyle"
+        :index="index"
+        :content="titleContent"
+      />
     </div>
-    <div v-if="image && image.src" :style="image.container_style || {}">
-      <img :src="image.src" :style="image.style" class="ai-rate-group__image" />
+    <div
+      v-if="image && image.src"
+      :style="image.container_style || {}"
+    >
+      <img
+        :src="image.src"
+        :style="image.style"
+        class="ai-rate-group__image"
+      >
     </div>
     <div class="ai-rate-group__list">
       <ai-rate
-        :key="i"
         v-for="(v, i) in realOptions"
+        :key="i"
         v-model="checkedMap[v[props.value]]"
         :title-content="v[props.label]"
         :title-style="optionStyle"
@@ -20,11 +31,17 @@
         @input="handleInput"
       />
     </div>
-    <div v-if="collectReason" class="ai-answer-reason">
-      <span class="ai-answer-reason__title" :style="reasonStyle">
+    <div
+      v-if="collectReason"
+      class="ai-answer-reason"
+    >
+      <span
+        class="ai-answer-reason__title"
+        :style="reasonStyle"
+      >
         Tell us the reason for your score(Optional)
       </span>
-      <textarea class="ai-answer-reason__content"></textarea>
+      <textarea class="ai-answer-reason__content" />
     </div>
   </div>
 </template>
@@ -91,14 +108,14 @@ export default {
       default: false
     }
   },
-  data() {
+  data () {
     return {
       checkedMap: {}
     }
   },
   watch: {
     value: {
-      handler(val) {
+      handler (val) {
         if (!val || JSON.stringify(val) === '{}') {
           this.checkedMap = this.realOptions.reduce((init, v) => {
             init[v[this.props.value]] = ''
@@ -115,7 +132,7 @@ export default {
     }
   },
   methods: {
-    handleInput() {
+    handleInput () {
       this.$emit('input', this.checkedMap)
     }
   }

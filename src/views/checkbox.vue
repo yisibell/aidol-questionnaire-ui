@@ -18,8 +18,8 @@
 
 <script>
 export default {
-  name: 'Checkbox',
-  data() {
+  name: 'CheckboxDemo',
+  data () {
     return {
       checked: [],
       options: [

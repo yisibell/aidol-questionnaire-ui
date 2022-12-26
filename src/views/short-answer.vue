@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       validMessage:
         'Please complete the current question before clicking the next.',

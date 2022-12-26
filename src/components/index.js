@@ -8,8 +8,8 @@ import AiCustomRate from './custom-rate'
 
 import '@/styles/index.scss'
 
-function install(Vue) {
-  ;[
+function install (Vue) {
+  [
     AiChoice,
     AiTitle,
     AiShortAnswer,

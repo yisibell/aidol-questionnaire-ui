@@ -15,15 +15,21 @@
         :texts="texts"
       />
     </ai-block-tips>
-    <button @click="onClick">Set 30</button>
-    <button @click="onReset">Reset</button>
-    <button @click="onGetValue">Get Value</button>
+    <button @click="onClick">
+      Set 30
+    </button>
+    <button @click="onReset">
+      Reset
+    </button>
+    <button @click="onGetValue">
+      Get Value
+    </button>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       collect_reason: true,
       validMessage:
@@ -63,13 +69,13 @@ export default {
     }
   },
   methods: {
-    onClick() {
+    onClick () {
       this.answer = '30'
     },
-    onReset() {
+    onReset () {
       this.answer = ''
     },
-    onGetValue() {
+    onGetValue () {
       alert(this.answer)
     }
   }

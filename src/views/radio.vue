@@ -18,8 +18,8 @@
 
 <script>
 export default {
-  name: 'Radio',
-  data() {
+  name: 'RadioDemo',
+  data () {
     return {
       validMessage:
         'Please complete the current question before clicking the next.',
