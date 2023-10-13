@@ -12,9 +12,9 @@
 
 A questionnaire survey ui library for Vue.js.
 
-- See [example](https://hongwenqing.com/aidol-questionnaire-ui/) here.
+- :book: [Example](https://hongwenqing.com/aidol-questionnaire-ui/).
 
-- ✨  [Release Notes](./CHANGELOG.md).
+- ✨ [Release Notes](./CHANGELOG.md).
 
 
 # Features
