@@ -1,3 +1,13 @@
+<p align="center">
+  <a href="https://www.npmjs.org/package/aidol-questionnaire-ui">
+    <img src="https://img.shields.io/npm/v/aidol-questionnaire-ui.svg">
+  </a>
+  <a href="https://npmcharts.com/compare/aidol-questionnaire-ui?minimal=true">
+    <img src="https://img.shields.io/npm/dm/aidol-questionnaire-ui.svg">
+  </a>
+  <br>
+</p>
+
 # aidol-questionnaire-ui
 
 A questionnaire survey ui library for Vue.js.
@@ -44,7 +54,8 @@ new Vue({
 })
 ```
 
-# Components
+# Docs
+## Components
 
 1. <a href="./docs/ai-choice.md">ai-choice（选择题，支持单选，多选）</a>
 2. <a href="./docs/ai-short-answer.md">ai-short-answer（简答题）</a>
@@ -64,6 +75,9 @@ $ yarn install
 
 # Develop with the example
 $ yarn dev
+
+# Build the lib
+$ yarn build
 
 # Build the example
 $ yarn build:example
