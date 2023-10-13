@@ -2,7 +2,9 @@
 
 A questionnaire survey ui library for Vue.js.
 
-see <a href="https://hongwenqing.com/aidol-questionnaire-ui/" target="_blank"> Example </a> here.
+- See [example](https://hongwenqing.com/aidol-questionnaire-ui/) here.
+
+- ✨  [Release Notes](./CHANGELOG.md).
 
 # Installation
 
@@ -54,6 +56,18 @@ new Vue({
 
 > TIPS: 需要添加组件，或者更新组件功能的话，请提交 **PR**。
 
-# CHANGE LOG
+# Development
 
-See <a href="./CHANGELOG.md">CHANGE LOG</a>。
+```bash
+# Install dependencies
+$ yarn install
+
+# Develop with the example
+$ yarn dev
+
+# Build the example
+$ yarn build:example
+
+# Release new version
+$ npm run release
+```

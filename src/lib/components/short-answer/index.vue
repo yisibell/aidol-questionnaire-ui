@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import AiTitle from '@/components/title'
+import AiTitle from '@/lib/components/title'
 export default {
   name: 'AiShortAnswer',
   components: {

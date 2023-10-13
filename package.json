@@ -20,14 +20,16 @@
     "vue",
     "questionnaire",
     "components",
-    "aidol"
+    "aidol",
+    "questionnaire-ui",
+    "ui library"
   ],
   "scripts": {
     "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name AidolQuestionnaireUI ./src/components/index.js",
-    "build-example": "vue-cli-service build --dest example",
+    "build": "vue-cli-service build --target lib --name AidolQuestionnaireUI ./src/lib/main.js",
+    "build:example": "vue-cli-service build --dest example",
     "lint": "vue-cli-service lint",
-    "release": "npm publish --access=public"
+    "release": "npm run build && changelogen --release && npm publish --access=public && git push --follow-tags"
   },
   "peerDependencies": {
     "vue": "^2.6.11"
@@ -39,6 +41,7 @@
     "@vue/cli-plugin-router": "~5.0.8",
     "@vue/cli-service": "~5.0.8",
     "@vue/eslint-config-standard": "^7.0.0",
+    "changelogen": "^0.5.5",
     "core-js": "^3.6.5",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.30.0",

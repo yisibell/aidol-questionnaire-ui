@@ -1,4 +1,5 @@
-import { createIndex } from '@/utils'
+import { createIndex } from '@/lib/utils'
+
 export default {
   props: {
     // 选项列表

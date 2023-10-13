@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import PropsOptions from '@/mixin/props-options'
+import PropsOptions from '@/lib/mixin/props-options'
 export default {
   name: 'AiRateGroup',
   mixins: [PropsOptions],
