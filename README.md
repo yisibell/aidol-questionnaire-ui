@@ -16,6 +16,24 @@ A questionnaire survey ui library for Vue.js.
 
 - ✨  [Release Notes](./CHANGELOG.md).
 
+
+# Features
+
+## 答题组件
+
+1. [ai-choice（选择题，支持单选，多选）](./docs/ai-choice.md)
+2. [ai-short-answer（简答题）](./docs/ai-short-answer.md)
+3. [ai-rate（评分）](./docs/ai-rate.md)
+4. [ai-rate-group（评分组）](./docs/ai-rate-group.md)
+5. [ai-custom-rate（可自定义的评分](./docs/ai-custom-rate.md)
+
+
+## 其他组件
+
+1. [ai-block-tips（提示块）](./docs/ai-block-tips.md)
+
+> TIPS: 需要添加组件，或者更新组件功能的话，请提交 **PR**。
+
 # Installation
 
 ``` bash
@@ -53,19 +71,6 @@ new Vue({
   // ...
 })
 ```
-
-# Docs
-## Components
-
-1. <a href="./docs/ai-choice.md">ai-choice（选择题，支持单选，多选）</a>
-2. <a href="./docs/ai-short-answer.md">ai-short-answer（简答题）</a>
-3. <a href="./docs/ai-rate.md">ai-rate（评分）</a>
-4. <a href="./docs/ai-rate-group.md">ai-rate-group（评分组）</a>
-5. <a href="./docs/ai-custom-rate.md">ai-custom-rate（可自定义的评分）</a>
-6. <a href="./docs/ai-block-tips.md">ai-block-tips（提示块）</a>
-
-
-> TIPS: 需要添加组件，或者更新组件功能的话，请提交 **PR**。
 
 # Development
 
