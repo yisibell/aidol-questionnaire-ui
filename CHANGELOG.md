@@ -1,5 +1,17 @@
 # CHANGE LOGS
 
+## v1.3.0
+
+[compare changes](https://github.com/yisibell/aidol-questionnaire-ui/compare/v1.2.0...v1.3.0)
+
+### 🚀 Enhancements
+
+- Add title-image conponent stylesheet ([20eafbc](https://github.com/yisibell/aidol-questionnaire-ui/commit/20eafbc))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.2.0
 
 [compare changes](https://github.com/yisibell/aidol-questionnaire-ui/compare/v1.1.0...v1.2.0)
