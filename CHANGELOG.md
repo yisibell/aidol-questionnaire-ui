@@ -1,5 +1,17 @@
 # CHANGE LOGS
 
+## v1.4.0
+
+[compare changes](https://github.com/yisibell/aidol-questionnaire-ui/compare/v1.3.0...v1.4.0)
+
+### 🚀 Enhancements
+
+- Update rate styles ([49e01c4](https://github.com/yisibell/aidol-questionnaire-ui/commit/49e01c4))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.3.0
 
 [compare changes](https://github.com/yisibell/aidol-questionnaire-ui/compare/v1.2.0...v1.3.0)
