@@ -1,5 +1,17 @@
 # CHANGE LOGS
 
+## v1.2.0
+
+[compare changes](https://github.com/yisibell/aidol-questionnaire-ui/compare/v1.1.0...v1.2.0)
+
+### 🚀 Enhancements
+
+- Extract title image to  `title-image` component ([31aff9a](https://github.com/yisibell/aidol-questionnaire-ui/commit/31aff9a))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.1.0
 
 [compare changes](https://github.com/yisibell/aidol-questionnaire-ui/compare/v0.12.5...v1.1.0)
