@@ -8,6 +8,7 @@
       :src="image.src"
       :style="image.style"
       :class="imgClassName"
+      class="ai-title-image__inner"
     >
   </div>
 </template>
