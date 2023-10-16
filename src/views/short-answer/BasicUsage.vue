@@ -1,20 +1,17 @@
 <template>
-  <div>
-    <ai-short-answer
-      v-model="answer"
-      :index="4"
-      :image="image"
-      title-content="What is your fit preference?"
-      :title-style="titleStyle"
-    />
-  </div>
+  <ai-short-answer
+    v-model="answer"
+    :index="4"
+    :image="image"
+    title-content="What is your fit preference?"
+    :title-style="titleStyle"
+  />
 </template>
 
 <script>
 export default {
   data () {
     return {
-
       answer: '',
       image: {
         src:

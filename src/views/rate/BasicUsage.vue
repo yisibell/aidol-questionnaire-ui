@@ -1,18 +1,16 @@
 <template>
-  <div>
-    <ai-rate
-      v-model="answer"
-      :answer-reason-value.sync="reasonValue"
-      title-content="What is your fit preference? What is your fit preference?What is your fit preference?"
-      :max="5"
-      show-text
-      :collect-reason="true"
-      :texts="texts"
-      :title-style="titleStyle"
-      :option-style="optionStyle"
-      :reason-style="reasonStyle"
-    />
-  </div>
+  <ai-rate
+    v-model="answer"
+    :answer-reason-value.sync="reasonValue"
+    title-content="What is your fit preference? What is your fit preference?What is your fit preference?"
+    :max="5"
+    show-text
+    :collect-reason="true"
+    :texts="texts"
+    :title-style="titleStyle"
+    :option-style="optionStyle"
+    :reason-style="reasonStyle"
+  />
 </template>
 
 <script>

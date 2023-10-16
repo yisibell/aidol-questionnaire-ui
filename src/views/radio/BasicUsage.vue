@@ -1,18 +1,16 @@
 <template>
-  <div>
-    <ai-choice
-      v-model="checked"
-      :answer-reason-value.sync="reasonValue"
-      :index="1"
-      :options="options"
-      :image="image"
-      :collect-reason="collect_reason"
-      title-content="How much are you willing to spend every time when shop clothing online?"
-      :title-style="titleStyle"
-      :option-style="optionStyle"
-      :reason-style="reasonStyle"
-    />
-  </div>
+  <ai-choice
+    v-model="checked"
+    :answer-reason-value.sync="reasonValue"
+    :index="1"
+    :options="options"
+    :image="image"
+    :collect-reason="collect_reason"
+    title-content="How much are you willing to spend every time when shop clothing online?"
+    :title-style="titleStyle"
+    :option-style="optionStyle"
+    :reason-style="reasonStyle"
+  />
 </template>
 
 <script>

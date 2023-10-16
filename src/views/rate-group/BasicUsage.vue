@@ -1,20 +1,18 @@
 <template>
-  <div>
-    <ai-rate-group
-      v-model="answer"
-      :answer-reason-value.sync="reasonValue"
-      :index="6"
-      :image="image"
-      :collect-reason="true"
-      title-content="What is your fit preference?What is your fit preference?What is your fit preference?What is your fit preference?What is your fit preference?What is your fit preference?"
-      :options="options"
-      show-text
-      :texts="texts"
-      :title-style="titleStyle"
-      :option-style="optionStyle"
-      :reason-style="reasonStyle"
-    />
-  </div>
+  <ai-rate-group
+    v-model="answer"
+    :answer-reason-value.sync="reasonValue"
+    :index="6"
+    :image="image"
+    :collect-reason="true"
+    title-content="What is your fit preference?What is your fit preference?What is your fit preference?What is your fit preference?What is your fit preference?What is your fit preference?"
+    :options="options"
+    show-text
+    :texts="texts"
+    :title-style="titleStyle"
+    :option-style="optionStyle"
+    :reason-style="reasonStyle"
+  />
 </template>
 
 <script>

@@ -24,6 +24,7 @@
         :max="max"
         :show-text="showText"
         :texts="texts"
+        class="ai-rate-group__list-item"
         @input="handleInput"
       />
     </div>

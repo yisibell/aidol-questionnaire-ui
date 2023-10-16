@@ -23,7 +23,7 @@ export const componetRoutes = [
   {
     path: '/checkbox',
     name: 'Checkbox',
-    component: () => import('@/views/checkbox.vue'),
+    component: () => import('@/views/checkbox'),
     meta: {
       title: '多选题'
     }
@@ -66,7 +66,7 @@ export const othersComponentsRoutes = [
   {
     path: '/others/block-tips',
     name: 'BlockTips',
-    component: () => import('@/views/block-tips.vue'),
+    component: () => import('@/views/block-tips'),
     meta: {
       title: '提示块'
     }

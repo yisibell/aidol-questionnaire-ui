@@ -1,19 +1,17 @@
 <template>
-  <div>
-    <ai-choice
-      v-model="checked"
-      :index="3"
-      :image="image"
-      :collect-reason="collect_reason"
-      multiple
-      :title-style="titleStyle"
-      :option-style="optionStyle"
-      :reason-style="reasonStyle"
-      :options="options"
-      :max="2"
-      title-content="What kind of sale promotions do you prefer? (multiple choice)"
-    />
-  </div>
+  <ai-choice
+    v-model="checked"
+    :index="3"
+    :image="image"
+    :collect-reason="collect_reason"
+    multiple
+    :title-style="titleStyle"
+    :option-style="optionStyle"
+    :reason-style="reasonStyle"
+    :options="options"
+    :max="2"
+    title-content="What kind of sale promotions do you prefer? (multiple choice)"
+  />
 </template>
 
 <script>
