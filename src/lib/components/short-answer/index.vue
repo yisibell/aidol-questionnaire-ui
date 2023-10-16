@@ -5,16 +5,12 @@
       :index="index"
       :content="titleContent"
     />
-    <div
-      v-if="image && image.src"
-      :style="image.container_style || {}"
-    >
-      <img
-        :src="image.src"
-        :style="image.style"
-        class="ai-short-answer__image"
-      >
-    </div>
+
+    <AiTitleImage
+      :image="image"
+      img-class-name="ai-short-answer__image"
+    />
+
     <div class="ai-short-answer__content">
       <textarea
         class="ai-short-answer__content__inner"
@@ -38,10 +34,13 @@
 
 <script>
 import AiTitle from '@/lib/components/title'
+import AiTitleImage from '@/lib/components/title-image'
+
 export default {
   name: 'AiShortAnswer',
   components: {
-    AiTitle
+    AiTitle,
+    AiTitleImage
   },
   props: {
     // 题目索引

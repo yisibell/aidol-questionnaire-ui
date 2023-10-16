@@ -7,16 +7,12 @@
         :content="titleContent"
       />
     </div>
-    <div
-      v-if="image && image.src"
-      :style="image.container_style || {}"
-    >
-      <img
-        :src="image.src"
-        :style="image.style"
-        class="ai-rate-group__image"
-      >
-    </div>
+
+    <AiTitleImage
+      :image="image"
+      img-class-name="ai-rate-group__image"
+    />
+
     <div class="ai-rate-group__list">
       <ai-rate
         v-for="(v, i) in realOptions"
@@ -43,12 +39,14 @@
 
 <script>
 import PropsOptions from '@/lib/mixin/props-options'
-import AiAnswerReason from '@/lib/components/AnswerReason'
+import AiAnswerReason from '@/lib/components/answer-reason'
+import AiTitleImage from '@/lib/components/title-image'
 
 export default {
   name: 'AiRateGroup',
   components: {
-    AiAnswerReason
+    AiAnswerReason,
+    AiTitleImage
   },
   mixins: [PropsOptions],
   props: {

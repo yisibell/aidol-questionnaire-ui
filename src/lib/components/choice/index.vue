@@ -6,16 +6,11 @@
       :content="titleContent"
       :suffix-text="realTitleSuffixText"
     />
-    <div
-      v-if="image && image.src"
-      :style="image.container_style || {}"
-    >
-      <img
-        :src="image.src"
-        :style="image.style"
-        class="ai-choice__image"
-      >
-    </div>
+
+    <AiTitleImage
+      :image="image"
+      img-class-name="ai-choice__image"
+    />
 
     <div :class="choiceListClass">
       <div
@@ -56,12 +51,14 @@
 
 <script>
 import PropsOptions from '@/lib/mixin/props-options'
-import AiAnswerReason from '@/lib/components/AnswerReason'
+import AiAnswerReason from '@/lib/components/answer-reason'
+import AiTitleImage from '@/lib/components/title-image'
 
 export default {
   name: 'AiChoice',
   components: {
-    AiAnswerReason
+    AiAnswerReason,
+    AiTitleImage
   },
   mixins: [PropsOptions],
   props: {
@@ -125,7 +122,9 @@ export default {
     },
     image: {
       type: Object,
-      default: () => ({})
+      default: () => ({
+
+      })
     },
     collectReason: {
       type: [Boolean, Number],

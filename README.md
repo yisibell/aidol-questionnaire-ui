@@ -25,7 +25,7 @@ A questionnaire survey ui library for Vue.js.
 2. [ai-short-answer（简答题）](./docs/ai-short-answer.md)
 3. [ai-rate（评分）](./docs/ai-rate.md)
 4. [ai-rate-group（评分组）](./docs/ai-rate-group.md)
-5. [ai-custom-rate（可自定义的评分](./docs/ai-custom-rate.md)
+5. [ai-custom-rate（可自定义的评分)](./docs/ai-custom-rate.md)
 
 
 ## 其他组件

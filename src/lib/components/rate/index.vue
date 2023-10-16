@@ -6,16 +6,12 @@
     >
       {{ titleContent }}
     </div>
-    <div
-      v-if="image && image.src"
-      :style="image.container_style || {}"
-    >
-      <img
-        :src="image.src"
-        :style="image.style"
-        class="ai-rate__image"
-      >
-    </div>
+
+    <AiTitleImage
+      :image="image"
+      img-class-name="ai-rate__image"
+    />
+
     <div
       class="ai-rate__content"
       :style="optionStyle"
@@ -53,12 +49,14 @@
 </template>
 
 <script>
-import AiAnswerReason from '@/lib/components/AnswerReason'
+import AiAnswerReason from '@/lib/components/answer-reason'
+import AiTitleImage from '@/lib/components/title-image'
 
 export default {
   name: 'AiRate',
   components: {
-    AiAnswerReason
+    AiAnswerReason,
+    AiTitleImage
   },
   props: {
     // 双绑值
