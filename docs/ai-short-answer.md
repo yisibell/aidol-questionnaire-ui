@@ -16,4 +16,4 @@
 | `readonly` | 是否只读 | `Boolean` | - | `false` |
 | `resize` | 控制是否能被用户缩放	 | `String` | `none, both, horizontal, vertical` | - |
 | `rows` | 输入框行数	| `String` | - | `10` |
-| `image` | 问题图片配置选项 | `Object` | - | 见<a href="./image.md">image</a>配置 |
+| `image` | 问题图片配置选项 | `Object` | - | 见 [image](./image.md) 配置 |
