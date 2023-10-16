@@ -62,13 +62,25 @@ export const componetRoutes = [
   }
 ]
 
+export const othersComponentsRoutes = [
+  {
+    path: '/others/block-tips',
+    name: 'BlockTips',
+    component: () => import('@/views/block-tips.vue'),
+    meta: {
+      title: '提示块'
+    }
+  }
+]
+
 export const routes = [
   {
     path: '/',
     name: 'Home',
     redirect: '/radio'
   },
-  ...componetRoutes
+  ...componetRoutes,
+  ...othersComponentsRoutes
 ]
 
 const router = new VueRouter({

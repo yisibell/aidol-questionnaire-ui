@@ -43,28 +43,33 @@
         {{ rateText }}
       </div>
     </div>
-    <div
+
+    <AiAnswerReason
       v-if="collectReason"
-      class="ai-answer-reason"
-    >
-      <span
-        class="ai-answer-reason__title"
-        :style="reasonStyle"
-      >
-        Tell us the reason for your score(Optional)
-      </span>
-      <textarea class="ai-answer-reason__content" />
-    </div>
+      v-model="answerReason"
+      title-content="Tell us the reason for your score(Optional)"
+      :title-style="reasonStyle"
+    />
   </div>
 </template>
 
 <script>
+import AiAnswerReason from '@/lib/components/AnswerReason'
+
 export default {
   name: 'AiCustomRate',
+  components: {
+    AiAnswerReason
+  },
   props: {
     // 双绑值
     value: {
       type: [Number, String],
+      default: ''
+    },
+    // 原因双绑值
+    answerReasonValue: {
+      type: String,
       default: ''
     },
     // 标题
@@ -107,15 +112,22 @@ export default {
       type: Array,
       default: () => []
     },
+    /**
+     * 添加图片
+     */
     image: {
       type: Object,
       default: () => ({})
     },
+    /**
+     * 是否显示原因输入控件
+     */
     collectReason: {
       type: [Boolean, Number],
       default: false
     }
   },
+  emits: ['input', 'update:answerReasonValue'],
   data () {
     return {
       hoverActive: -1,
@@ -126,6 +138,14 @@ export default {
     }
   },
   computed: {
+    answerReason: {
+      get () {
+        return this.answerReasonValue
+      },
+      set (value) {
+        this.$emit('update:answerReasonValue', value)
+      }
+    },
     rateText () {
       let ac = this.active
       if (this.hovering) {

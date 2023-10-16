@@ -16,6 +16,7 @@
         class="ai-choice__image"
       >
     </div>
+
     <div :class="choiceListClass">
       <div
         v-for="(v, i) in realOptions"
@@ -44,25 +45,24 @@
         />
       </div>
     </div>
-    <div
+
+    <AiAnswerReason
       v-if="collectReason"
-      class="ai-answer-reason"
-    >
-      <span
-        class="ai-answer-reason__title"
-        :style="reasonStyle"
-      >
-        Tell us the reason for your option(Optional)
-      </span>
-      <textarea class="ai-answer-reason__content" />
-    </div>
+      v-model="answerReason"
+      :title-style="reasonStyle"
+    />
   </div>
 </template>
 
 <script>
 import PropsOptions from '@/lib/mixin/props-options'
+import AiAnswerReason from '@/lib/components/AnswerReason'
+
 export default {
   name: 'AiChoice',
+  components: {
+    AiAnswerReason
+  },
   mixins: [PropsOptions],
   props: {
     // 答题类型
@@ -78,10 +78,15 @@ export default {
       type: [Number, String],
       default: ''
     },
-    // 双绑数据
+    // 选择值
     value: {
       type: [Number, String, Array],
       default: () => []
+    },
+    // 原因双绑值
+    answerReasonValue: {
+      type: String,
+      default: ''
     },
     // 是否多选
     multiple: {
@@ -127,12 +132,21 @@ export default {
       default: false
     }
   },
+  emits: ['update:answerReasonValue', 'input'],
   data () {
     return {
       checked: ''
     }
   },
   computed: {
+    answerReason: {
+      get () {
+        return this.answerReasonValue
+      },
+      set (value) {
+        this.$emit('update:answerReasonValue', value)
+      }
+    },
     showImage () {
       return ['image', 'only-image'].includes(this.type)
     },

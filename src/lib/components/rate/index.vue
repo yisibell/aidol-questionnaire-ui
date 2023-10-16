@@ -42,29 +42,34 @@
         {{ rateText }}
       </div>
     </div>
-    <div
+
+    <AiAnswerReason
       v-if="collectReason"
-      class="ai-answer-reason"
-    >
-      <span
-        class="ai-answer-reason__title"
-        :style="reasonStyle"
-      >
-        Tell us the reason for your score(Optional)
-      </span>
-      <textarea class="ai-answer-reason__content" />
-    </div>
+      v-model="answerReason"
+      title-content="Tell us the reason for your score(Optional)"
+      :title-style="reasonStyle"
+    />
   </div>
 </template>
 
 <script>
+import AiAnswerReason from '@/lib/components/AnswerReason'
+
 export default {
   name: 'AiRate',
+  components: {
+    AiAnswerReason
+  },
   props: {
     // 双绑值
     value: {
       type: [Number, String],
       default: 0
+    },
+    // 原因双绑值
+    answerReasonValue: {
+      type: String,
+      default: ''
     },
     // 标题
     titleContent: {
@@ -110,6 +115,7 @@ export default {
       default: false
     }
   },
+  emits: ['input', 'update:answerReasonValue'],
   data () {
     return {
       hoverActive: '',
@@ -118,6 +124,14 @@ export default {
     }
   },
   computed: {
+    answerReason: {
+      get () {
+        return this.answerReasonValue
+      },
+      set (value) {
+        this.$emit('update:answerReasonValue', value)
+      }
+    },
     rateMax () {
       const { parseInt } = Number
       return parseInt(this.max)

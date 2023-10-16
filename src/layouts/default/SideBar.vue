@@ -1,12 +1,16 @@
 <template>
   <div class="sidebar">
-    <div class="sidebar-group">
+    <div
+      v-for="(g, j) in sidebarList"
+      :key="j"
+      class="sidebar-group"
+    >
       <div class="sidebar-group__title">
-        答题组件
+        {{ g.groupName }}
       </div>
       <div class="sidebar-group__list">
         <div
-          v-for="(v,i) in componetRoutes"
+          v-for="(v,i) in g.items"
           :key="i"
           class="sidebar-group__list-item"
           :class="{active: activePath === v.path}"
@@ -21,18 +25,31 @@
 </template>
 
 <script>
-import { componetRoutes } from '@/router'
+import { componetRoutes, othersComponentsRoutes } from '@/router'
 
 export default {
   name: 'SideBar',
   data () {
     return {
-      componetRoutes
+      componetRoutes,
+      othersComponentsRoutes
     }
   },
   computed: {
     activePath () {
       return this.$route.path
+    },
+    sidebarList () {
+      return [
+        {
+          groupName: '答题组件',
+          items: componetRoutes
+        },
+        {
+          groupName: '其他组件',
+          items: othersComponentsRoutes
+        }
+      ]
     }
   }
 }
@@ -45,8 +62,7 @@ export default {
   overflow-y: auto;
 
   &-group {
-    padding: 20px 16px 16px 36px;
-    margin-bottom: 30px;
+    padding: 20px 16px 0px 36px;
 
     &__title {
       font-weight: 600;

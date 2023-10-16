@@ -4,9 +4,10 @@
 
 ### Attributes
 
-| 参数 | 说明 | 类型 |可选值 | 默认值 |
+| 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | :---: |:---: |:---: |:---:| :---: |
 | `value/v-model` | 绑定值 | `Number/String/Array` | - | - |
+| `answerReasonValue` | 原因双绑值，支持 `.sync` | `string` | - | - |
 | `index` | 题目索引值 | `Number/String` | - | - |
 | `multiple` | 是否多选 | `Boolean` | - | `false` |
 | `max` |  多选时，最大可选择个数, `0` 表示不限制 | `Number` | - | `0` |

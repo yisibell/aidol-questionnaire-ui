@@ -50,7 +50,7 @@ export default {
         'font-size': '14px'
       },
       reasonStyle: {
-        color: 'yellow',
+        color: 'red',
         'font-size': '14px'
       }
     }

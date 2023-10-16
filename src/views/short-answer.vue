@@ -1,14 +1,12 @@
 <template>
   <div>
-    <ai-block-tips :message="validMessage">
-      <ai-short-answer
-        v-model="answer"
-        :index="4"
-        :image="image"
-        title-content="What is your fit preference?"
-        :title-style="titleStyle"
-      />
-    </ai-block-tips>
+    <ai-short-answer
+      v-model="answer"
+      :index="4"
+      :image="image"
+      title-content="What is your fit preference?"
+      :title-style="titleStyle"
+    />
   </div>
 </template>
 
@@ -16,8 +14,7 @@
 export default {
   data () {
     return {
-      validMessage:
-        'Please complete the current question before clicking the next.',
+
       answer: '',
       image: {
         src:
@@ -28,7 +25,7 @@ export default {
           'text-align': 'center'
         },
         style: {
-          width: '600px'
+          width: '480px'
         }
       },
       titleStyle: {

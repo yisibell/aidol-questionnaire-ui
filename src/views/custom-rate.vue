@@ -1,29 +1,31 @@
 <template>
   <div>
-    <ai-block-tips :message="validMessage">
-      <ai-custom-rate
-        v-model="answer"
-        title-content="What is your fit preference? What is your fit preference?What is your fit preference?"
-        :index="7"
-        show-text
-        :title-style="titleStyle"
-        :option-style="optionStyle"
-        :reason-style="reasonStyle"
-        :image="image"
-        :collect-reason="collect_reason"
-        :options="options"
-        :texts="texts"
-      />
-    </ai-block-tips>
-    <button @click="onClick">
-      Set 30
-    </button>
-    <button @click="onReset">
-      Reset
-    </button>
-    <button @click="onGetValue">
-      Get Value
-    </button>
+    <ai-custom-rate
+      v-model="answer"
+      :answer-reason-value.sync="reasonValue"
+      title-content="What is your fit preference? What is your fit preference?What is your fit preference?"
+      :index="7"
+      show-text
+      :title-style="titleStyle"
+      :option-style="optionStyle"
+      :reason-style="reasonStyle"
+      :image="image"
+      :collect-reason="collect_reason"
+      :options="options"
+      :texts="texts"
+    />
+
+    <div>
+      <button @click="onClick">
+        Set 30
+      </button>
+      <button @click="onReset">
+        Reset
+      </button>
+      <button @click="onGetValue">
+        Get Value
+      </button>
+    </div>
   </div>
 </template>
 
@@ -32,9 +34,8 @@ export default {
   data () {
     return {
       collect_reason: true,
-      validMessage:
-        'Please complete the current question before clicking the next.',
       answer: '',
+      reasonValue: 'this is why.',
       options: [
         { label: '10', value: '10' },
         { label: '20', value: '20' },
@@ -52,7 +53,7 @@ export default {
           'text-align': 'center'
         },
         style: {
-          width: '600px'
+          width: '480px'
         }
       },
       titleStyle: {
@@ -63,7 +64,7 @@ export default {
         'font-size': '14px'
       },
       reasonStyle: {
-        color: 'yellow',
+        color: 'red',
         'font-size': '14px'
       }
     }

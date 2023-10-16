@@ -1,18 +1,17 @@
 <template>
   <div>
-    <ai-block-tips :message="validMessage">
-      <ai-choice
-        v-model="checked"
-        :index="1"
-        :options="options"
-        :image="image"
-        :collect-reason="collect_reason"
-        title-content="How much are you willing to spend every time when shop clothing online?"
-        :title-style="titleStyle"
-        :option-style="optionStyle"
-        :reason-style="reasonStyle"
-      />
-    </ai-block-tips>
+    <ai-choice
+      v-model="checked"
+      :answer-reason-value.sync="reasonValue"
+      :index="1"
+      :options="options"
+      :image="image"
+      :collect-reason="collect_reason"
+      title-content="How much are you willing to spend every time when shop clothing online?"
+      :title-style="titleStyle"
+      :option-style="optionStyle"
+      :reason-style="reasonStyle"
+    />
   </div>
 </template>
 
@@ -21,13 +20,12 @@ export default {
   name: 'RadioDemo',
   data () {
     return {
-      validMessage:
-        'Please complete the current question before clicking the next.',
       checked: '',
+      reasonValue: 'this is my reason!',
       options: [
         {
           label:
-            '选项文本内容fagagggggggggggggggggggggggggggggggggggg hello gg hello world ggggggggg text word ggggggggggggggggggggggggggggggggggggggggggg',
+            '选项文本内容',
           value: 1
         },
         { label: '选项文本内容', value: 2 },
@@ -40,7 +38,7 @@ export default {
         src:
           'https://imgs.veryvoga.com/s330/a7/cc/10d1a8173eb551c214fa99aacef0a7cc.jpg',
         container_style: {
-          'background-color': '#f00',
+          'background-color': '#F8F8F8',
           padding: '5px 0 5px 0',
           'text-align': 'center'
         },
@@ -56,7 +54,7 @@ export default {
         'font-size': '14px'
       },
       reasonStyle: {
-        color: 'yellow',
+        color: 'red',
         'font-size': '14px'
       }
     }

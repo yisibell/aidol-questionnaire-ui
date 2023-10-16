@@ -1,20 +1,19 @@
 <template>
   <div>
-    <ai-block-tips :message="validMessage">
-      <ai-rate-group
-        v-model="answer"
-        :index="6"
-        :image="image"
-        :collect-reason="collect_reason"
-        title-content="What is your fit preference?What is your fit preference?What is your fit preference?What is your fit preference?What is your fit preference?What is your fit preference?"
-        :options="options"
-        show-text
-        :texts="texts"
-        :title-style="titleStyle"
-        :option-style="optionStyle"
-        :reason-style="reasonStyle"
-      />
-    </ai-block-tips>
+    <ai-rate-group
+      v-model="answer"
+      :answer-reason-value.sync="reasonValue"
+      :index="6"
+      :image="image"
+      :collect-reason="true"
+      title-content="What is your fit preference?What is your fit preference?What is your fit preference?What is your fit preference?What is your fit preference?What is your fit preference?"
+      :options="options"
+      show-text
+      :texts="texts"
+      :title-style="titleStyle"
+      :option-style="optionStyle"
+      :reason-style="reasonStyle"
+    />
   </div>
 </template>
 
@@ -22,9 +21,8 @@
 export default {
   data () {
     return {
-      validMessage:
-        'Please complete the current question before clicking the next.',
       answer: {},
+      reasonValue: 'this is my reason!',
       options: [
         {
           label:
@@ -35,7 +33,6 @@ export default {
         { label: 'Your title?', value: 2 }
       ],
       texts: ['很失望', '', '', '', '满意', '', '较满意', '', '', '非常满意'],
-      collect_reason: true,
       image: {
         src:
           'https://imgs.veryvoga.com/s330/a7/cc/10d1a8173eb551c214fa99aacef0a7cc.jpg',
@@ -45,7 +42,7 @@ export default {
           'text-align': 'center'
         },
         style: {
-          width: '600px'
+          width: '480px'
         }
       },
       titleStyle: {
@@ -56,7 +53,7 @@ export default {
         'font-size': '14px'
       },
       reasonStyle: {
-        color: 'yellow',
+        color: 'red',
         'font-size': '14px'
       }
     }

@@ -31,25 +31,25 @@
         @input="handleInput"
       />
     </div>
-    <div
+
+    <AiAnswerReason
       v-if="collectReason"
-      class="ai-answer-reason"
-    >
-      <span
-        class="ai-answer-reason__title"
-        :style="reasonStyle"
-      >
-        Tell us the reason for your score(Optional)
-      </span>
-      <textarea class="ai-answer-reason__content" />
-    </div>
+      v-model="answerReason"
+      title-content="Tell us the reason for your score(Optional)"
+      :title-style="reasonStyle"
+    />
   </div>
 </template>
 
 <script>
 import PropsOptions from '@/lib/mixin/props-options'
+import AiAnswerReason from '@/lib/components/AnswerReason'
+
 export default {
   name: 'AiRateGroup',
+  components: {
+    AiAnswerReason
+  },
   mixins: [PropsOptions],
   props: {
     // 题目索引
@@ -61,6 +61,11 @@ export default {
     value: {
       type: Object,
       default: () => ({})
+    },
+    // 原因双绑值
+    answerReasonValue: {
+      type: String,
+      default: ''
     },
     // 标题样式
     titleStyle: {
@@ -108,9 +113,20 @@ export default {
       default: false
     }
   },
+  emits: ['input', 'update:answerReasonValue'],
   data () {
     return {
       checkedMap: {}
+    }
+  },
+  computed: {
+    answerReason: {
+      get () {
+        return this.answerReasonValue
+      },
+      set (value) {
+        this.$emit('update:answerReasonValue', value)
+      }
     }
   },
   watch: {

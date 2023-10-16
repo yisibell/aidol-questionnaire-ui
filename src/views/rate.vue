@@ -2,10 +2,11 @@
   <div>
     <ai-rate
       v-model="answer"
+      :answer-reason-value.sync="reasonValue"
       title-content="What is your fit preference? What is your fit preference?What is your fit preference?"
       :max="5"
       show-text
-      :collect-reason="collect_reason"
+      :collect-reason="true"
       :texts="texts"
       :title-style="titleStyle"
       :option-style="optionStyle"
@@ -19,11 +20,9 @@ export default {
   name: 'RateDemo',
   data () {
     return {
-      validMessage:
-        'Please complete the current question before clicking the next.',
       answer: '',
+      reasonValue: 'this is my reason!',
       texts: ['很失望', '', '满意', '较满意', '非常满意'],
-      collect_reason: true,
       titleStyle: {
         color: 'red'
       },
@@ -32,7 +31,7 @@ export default {
         'font-size': '14px'
       },
       reasonStyle: {
-        color: 'yellow',
+        color: 'red',
         'font-size': '14px'
       }
     }
