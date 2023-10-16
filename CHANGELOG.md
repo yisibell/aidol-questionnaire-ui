@@ -1,5 +1,27 @@
 # CHANGE LOGS
 
+## v1.1.0
+
+[compare changes](https://github.com/yisibell/aidol-questionnaire-ui/compare/v0.12.5...v1.1.0)
+
+### 🚀 Enhancements
+
+- Extract `answer-reason` component and support model the reason value ([ca87309](https://github.com/yisibell/aidol-questionnaire-ui/commit/ca87309))
+
+### 🩹 Fixes
+
+- Deploy node version ([4d16f85](https://github.com/yisibell/aidol-questionnaire-ui/commit/4d16f85))
+
+### 🏡 Chore
+
+- Update readme ([105d885](https://github.com/yisibell/aidol-questionnaire-ui/commit/105d885))
+- Update readme ([47a064b](https://github.com/yisibell/aidol-questionnaire-ui/commit/47a064b))
+- Update readme ([a6b9c27](https://github.com/yisibell/aidol-questionnaire-ui/commit/a6b9c27))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v0.12.5
 
 [compare changes](https://github.com/yisibell/aidol-questionnaire-ui/compare/v0.12.4...v0.12.5)
