@@ -8,5 +8,15 @@ module.exports = {
     output: {
       libraryExport: 'default'
     }
+  },
+  chainWebpack: config => {
+    // raw Loader
+    const rawRule = config.module
+      .rule('raw')
+      .test(/\.txt$/)
+
+    rawRule.use('raw-loader')
+      .loader('raw-loader')
+      .end()
   }
 }

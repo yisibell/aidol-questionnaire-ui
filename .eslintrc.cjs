@@ -15,6 +15,7 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     semi: [2, 'never'],
     'vue/no-v-html': 0,
-    camelcase: 0
+    camelcase: 0,
+    'import/no-duplicates': ['error', { considerQueryString: true }]
   }
 }

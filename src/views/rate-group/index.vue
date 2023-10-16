@@ -1,9 +1,9 @@
 <template>
   <div>
-    <DocCard>
+    <DocCard :show-source="true">
       <BasicUsage />
       <template #source-code>
-        <code />
+        <pre class="lang-markup"><code>{{ BasicUsageCode }}</code></pre>
       </template>
     </DocCard>
 
@@ -21,6 +21,7 @@
 <script>
 import DocCard from '@/components/DocCard.vue'
 import BasicUsage from './BasicUsage'
+import BasicUsageCode from './BasicUsageCode.txt'
 
 export default {
   name: 'RadioDoc',
@@ -30,6 +31,7 @@ export default {
   },
   data () {
     return {
+      BasicUsageCode,
       docs: 'https://github.com/yisibell/aidol-questionnaire-ui/blob/main/docs/ai-rate-group.md'
     }
   }

@@ -4,6 +4,8 @@ import router from './router'
 
 import AidolUI from '@/lib/main'
 
+import 'prismjs/themes/prism.min.css'
+
 Vue.use(AidolUI)
 
 Vue.config.productionTip = false

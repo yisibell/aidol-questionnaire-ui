@@ -17,20 +17,24 @@
       v-if="showSource"
       class="doc-card__source"
     >
-      <div class="doc-card__source-code">
+      <div
+        v-show="expand"
+        class="doc-card__source-code"
+      >
         <slot name="source-code" />
       </div>
       <div class="doc-card__source-footer">
         <span
           class="expand-btn"
           @click="toggleExpand"
-        >{{ expand ? '收起' : '展开' }}</span>
+        >{{ expand ? '隐藏示例代码' : '查看示例代码' }}</span>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import prismjs from 'prismjs'
 
 export default {
   name: 'DocCard',
@@ -53,6 +57,9 @@ export default {
       expand: false
     }
   },
+  mounted () {
+    prismjs.highlightAll()
+  },
   methods: {
     toggleExpand () {
       this.expand = !this.expand
@@ -70,8 +77,10 @@ export default {
   box-sizing: border-box;
   margin-bottom: 30px;
 
+  --doc-card-color: #409EFF;
+
   a {
-    color: #409EFF;
+    color: var(--doc-card-color);
   }
 
   &__title {
@@ -97,10 +106,15 @@ export default {
     display: flex;
     justify-content: center;
     font-size: 14px;
-    color: #666;
+    color: var(--doc-card-color);
+    padding: 16px 0;
 
     .expand-btn {
       cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
