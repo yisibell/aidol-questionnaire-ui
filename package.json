@@ -41,6 +41,7 @@
     "@vue/cli-plugin-router": "~5.0.8",
     "@vue/cli-service": "~5.0.8",
     "@vue/eslint-config-standard": "^7.0.0",
+    "animate.css": "^4.1.1",
     "changelogen": "^0.5.5",
     "core-js": "^3.6.5",
     "cz-conventional-changelog": "^3.3.0",

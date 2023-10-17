@@ -2144,12 +2144,15 @@ var choice_component = normalizeComponent(
 )
 
 /* harmony default export */ var choice = (choice_component.exports);
-;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/lib/components/title/index.vue?vue&type=template&id=4c79c302&
-var titlevue_type_template_id_4c79c302_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ai-title"},[(_vm.index)?[_c('span',[_vm._v(_vm._s(_vm.index))]),_c('span',[_vm._v(". ")])]:_vm._e(),_c('span',[_vm._v(_vm._s(_vm.content))]),_c('span',{staticClass:"ai-title__suffix-text"},[_vm._v(_vm._s(_vm.suffixText))])],2)}
-var titlevue_type_template_id_4c79c302_staticRenderFns = []
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/lib/components/title/index.vue?vue&type=template&id=893e2f4c&
+var titlevue_type_template_id_893e2f4c_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.content)?_c('div',{staticClass:"ai-title"},[(_vm.index)?[_c('span',[_vm._v(_vm._s(_vm.index))]),_c('span',[_vm._v(". ")])]:_vm._e(),_c('span',[_vm._v(_vm._s(_vm.content))]),_c('span',{staticClass:"ai-title__suffix-text"},[_vm._v(_vm._s(_vm.suffixText))])],2):_vm._e()}
+var titlevue_type_template_id_893e2f4c_staticRenderFns = []
 
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/lib/components/title/index.vue?vue&type=script&lang=js&
+//
+//
+//
 //
 //
 //
@@ -2194,8 +2197,8 @@ var titlevue_type_template_id_4c79c302_staticRenderFns = []
 ;
 var title_component = normalizeComponent(
   components_titlevue_type_script_lang_js_,
-  titlevue_type_template_id_4c79c302_render,
-  titlevue_type_template_id_4c79c302_staticRenderFns,
+  titlevue_type_template_id_893e2f4c_render,
+  titlevue_type_template_id_893e2f4c_staticRenderFns,
   false,
   null,
   null,

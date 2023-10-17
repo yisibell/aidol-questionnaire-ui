@@ -1,7 +1,7 @@
 <template>
   <div
     class="ai-block-tips"
-    :class="[{ 'is-active': isActive }]"
+    :class="[{ 'is-active': isActive, animation: animation && isActive }]"
   >
     <div class="ai-block-tips__content">
       <slot name="default" />
@@ -21,14 +21,13 @@
 export default {
   name: 'AiBlockTips',
   props: {
-    // success, danger, warning
-    type: {
-      type: String,
-      default: ''
-    },
     message: {
       type: String,
       default: ''
+    },
+    animation: {
+      type: Boolean,
+      default: true
     }
   },
   computed: {
