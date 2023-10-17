@@ -1,5 +1,22 @@
 # CHANGE LOGS
 
+## v1.5.0
+
+[compare changes](https://github.com/yisibell/aidol-questionnaire-ui/compare/v1.4.0...v1.5.0)
+
+### 🚀 Enhancements
+
+- Refactor `ai-custom-rate` to alias of  `ai-rate` ([47f043e](https://github.com/yisibell/aidol-questionnaire-ui/commit/47f043e))
+
+### 🏡 Chore
+
+- Update example docs ([2be5749](https://github.com/yisibell/aidol-questionnaire-ui/commit/2be5749))
+- **docs:** Update api docs ([2d1d424](https://github.com/yisibell/aidol-questionnaire-ui/commit/2d1d424))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.4.0
 
 [compare changes](https://github.com/yisibell/aidol-questionnaire-ui/compare/v1.3.0...v1.4.0)
