@@ -1,6 +1,7 @@
 .ai-rate {
-  background-color: #fff;
-  margin-bottom: 15px;
+  background-color: #{$--container-bg-color};
+  padding: #{$--container-padding};
+  border-radius: #{$--container-border-radius};
   
   .active {
     background-color: var(--choice-bg-color-active, $--choice-bg-color-active);

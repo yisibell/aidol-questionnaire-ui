@@ -1,5 +1,8 @@
 <template>
-  <div class="ai-title">
+  <div
+    v-if="content"
+    class="ai-title"
+  >
     <template v-if="index">
       <span>{{ index }}</span>
       <span>. </span>

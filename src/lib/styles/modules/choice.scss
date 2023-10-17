@@ -1,5 +1,7 @@
 .ai-choice {
-  background-color: #ffffff;
+  background-color: #{$--container-bg-color};
+  padding: #{$--container-padding};
+  border-radius: #{$--container-border-radius};
 
   &__list {
     padding: 15px 0px;

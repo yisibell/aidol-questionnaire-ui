@@ -1,6 +1,7 @@
 .ai-rate-group {
-  background-color: #fff;
-  margin-bottom: 15px;
+  background-color: #{$--container-bg-color};
+  padding: #{$--container-padding};
+  border-radius: #{$--container-border-radius};
 
   &__title {
     margin-bottom: 15px;
@@ -10,7 +11,8 @@
     margin-bottom: 15px;
 
     &-item {
-      margin-bottom: 12px;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
