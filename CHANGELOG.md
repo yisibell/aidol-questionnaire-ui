@@ -1,5 +1,17 @@
 # CHANGE LOGS
 
+## v1.7.0
+
+[compare changes](https://github.com/yisibell/aidol-questionnaire-ui/compare/v1.6.0...v1.7.0)
+
+### 🚀 Enhancements
+
+- Block-tips support animation when showing ([0dfd89d](https://github.com/yisibell/aidol-questionnaire-ui/commit/0dfd89d))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.6.0
 
 [compare changes](https://github.com/yisibell/aidol-questionnaire-ui/compare/v1.5.0...v1.6.0)
