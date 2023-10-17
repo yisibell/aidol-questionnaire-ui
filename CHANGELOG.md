@@ -1,5 +1,21 @@
 # CHANGE LOGS
 
+## v1.6.0
+
+[compare changes](https://github.com/yisibell/aidol-questionnaire-ui/compare/v1.5.0...v1.6.0)
+
+### 🚀 Enhancements
+
+- Add default style for container of component ([23f9c1a](https://github.com/yisibell/aidol-questionnaire-ui/commit/23f9c1a))
+
+### 🏡 Chore
+
+- **docs:** Fix rate docs ([4b53e10](https://github.com/yisibell/aidol-questionnaire-ui/commit/4b53e10))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.5.0
 
 [compare changes](https://github.com/yisibell/aidol-questionnaire-ui/compare/v1.4.0...v1.5.0)
