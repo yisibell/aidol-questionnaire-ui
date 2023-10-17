@@ -1,5 +1,7 @@
 .ai-rate {
-
+  background-color: #fff;
+  margin-bottom: 15px;
+  
   .active {
     background-color: var(--choice-bg-color-active, $--choice-bg-color-active);
     border: 1px solid var(--choice-bg-color-active, $--choice-bg-color-active);
@@ -7,7 +9,6 @@
 
   &__title {
     font-size: 14px;
-    margin-bottom: 12px;
   }
 
   &__content {
@@ -17,14 +18,17 @@
     flex-wrap: wrap;
 
     &__item {
-      width: 32px;
-      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      min-width: 16px;
+      padding: 8px 10px;
       border-radius: 4px;
       border: 1px solid #a19f9f;
       background-color: #fff;
       margin: 5px 10px 5px 0px;
       text-align: center;
-      line-height: 32px;
       cursor: pointer;
       font-style: italic;
       font-size: 14px;

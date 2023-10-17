@@ -4,9 +4,10 @@
 
 ### Attributes
 
-| 参数 | 说明 | 类型 |可选值 | 默认值 |
+| 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | :---: |:---: |:---: |:---:| :---: |
 | `index` | 题目索引值 | `Number/String` | - | - |
+| `options` | 自定义选项，当设置了此属性时， `max` 将无效。 | `{label: string; value: number|string}[]` | - | - |
 | `value/v-model` | 绑定值 | `Number/String` | - | `0` |
 | `answerReasonValue` | 原因双绑值，支持 `.sync` | `string` | - | - |
 | `max` | 最大值 | `Number` | - | `5` |

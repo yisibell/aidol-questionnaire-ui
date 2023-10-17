@@ -45,21 +45,22 @@ export const componetRoutes = [
     }
   },
   {
+    path: '/custom-rate',
+    name: 'CustomRate',
+    component: () => import('@/views/custom-rate'),
+    meta: {
+      title: '量表题(自定义)'
+    }
+  },
+  {
     path: '/rate-group',
     name: 'RateGroup',
     component: () => import('@/views/rate-group'),
     meta: {
       title: '量表题组'
     }
-  },
-  {
-    path: '/custom-rate',
-    name: 'CustomRate',
-    component: () => import('@/views/custom-rate'),
-    meta: {
-      title: '自定义量表题'
-    }
   }
+
 ]
 
 export const othersComponentsRoutes = [

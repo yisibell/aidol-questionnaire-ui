@@ -2,9 +2,12 @@
   <div class="ai-rate">
     <div
       class="ai-rate__title"
-      :style="titleStyle"
     >
-      {{ titleContent }}
+      <ai-title
+        :style="titleStyle"
+        :index="index"
+        :content="titleContent"
+      />
     </div>
 
     <AiTitleImage
@@ -17,18 +20,18 @@
       :style="optionStyle"
     >
       <div
-        v-for="v in rateMax"
-        :key="v"
+        v-for="v in rateOptions"
+        :key="v.value"
         class="ai-rate__content__item"
         :class="[
-          { 'is-hover-active': v <= hoverActive && hoverIng },
-          { 'is-active': v <= active && !hoverIng }
+          { 'is-hover-active': isHoverActive(v.value) },
+          { 'is-active': isActive(v.value) }
         ]"
-        @mouseover="handleMouseover(v)"
-        @mouseout="handleMouseout(v)"
-        @click="handleClick(v)"
+        @mouseover="handleMouseover(v.value)"
+        @mouseout="handleMouseout(v.value)"
+        @click="handleClick(v.value)"
       >
-        {{ v }}
+        {{ v.label }}
       </div>
       <div
         v-if="showText"
@@ -51,11 +54,13 @@
 <script>
 import AiAnswerReason from '@/lib/components/answer-reason'
 import AiTitleImage from '@/lib/components/title-image'
+import AiTitle from '@/lib/components/title'
 
 export default {
   name: 'AiRate',
   components: {
     AiAnswerReason,
+    AiTitle,
     AiTitleImage
   },
   props: {
@@ -67,6 +72,11 @@ export default {
     // 原因双绑值
     answerReasonValue: {
       type: String,
+      default: ''
+    },
+    // 题目索引
+    index: {
+      type: [Number, String],
       default: ''
     },
     // 标题
@@ -94,6 +104,11 @@ export default {
       type: [Number, String],
       default: 5
     },
+    // 自定义选项，设置此选项时，max 将无效
+    options: {
+      type: [Array, undefined],
+      default: undefined
+    },
     // 是否显示辅助文字，若为真，则会从 texts 数组中选取当前分数对应的文字内容
     showText: {
       type: Boolean,
@@ -117,11 +132,18 @@ export default {
   data () {
     return {
       hoverActive: '',
-      active: this.value,
       hoverIng: false
     }
   },
   computed: {
+    active: {
+      get () {
+        return this.value
+      },
+      set (value) {
+        this.$emit('input', value)
+      }
+    },
     answerReason: {
       get () {
         return this.answerReasonValue
@@ -131,45 +153,56 @@ export default {
       }
     },
     rateMax () {
-      const { parseInt } = Number
-      return parseInt(this.max)
+      return Number.parseInt(this.max)
+    },
+    rateOptions () {
+      if (Array.isArray(this.options) && this.options.length > 0) {
+        return this.options
+      }
+
+      const res = []
+
+      for (let i = 1; i <= this.rateMax; i++) {
+        res.push({ label: i, value: i })
+      }
+
+      return res
     },
     rateText () {
-      let ac = this.active
+      const ac = this.hoverIng ? this.hoverActive : this.active
 
-      if (this.hoverIng) {
-        ac = this.hoverActive
-      } else {
-        ac = this.active
-      }
-
-      const index = ac - 1
+      const index = this.rateOptions.findIndex(v => v.value === ac)
 
       return this.texts[index]
-    }
-  },
-  watch: {
-    value: {
-      handler (val) {
-        this.active = val
-      }
+    },
+    hoverActiveIndex () {
+      return this.rateOptions.findIndex(v => v.value === this.hoverActive)
+    },
+    activeIndex () {
+      return this.rateOptions.findIndex(v => v.value === this.active)
     }
   },
   methods: {
-    handleMouseover (index) {
-      this.hoverActive = index
+    isHoverActive (value) {
+      const index = this.rateOptions.findIndex(v => v.value === value)
+
+      return index <= this.hoverActiveIndex && this.hoverIng
+    },
+    isActive (value) {
+      const index = this.rateOptions.findIndex(v => v.value === value)
+
+      return index <= this.activeIndex && !this.hoverIng
+    },
+    handleMouseover (value) {
+      this.hoverActive = value
       this.hoverIng = true
     },
-    handleMouseout (index) {
-      this.hoverActive = index
+    handleMouseout (value) {
+      this.hoverActive = value
       this.hoverIng = false
     },
-    handleClick (index) {
-      this.active = index
-      this.handleInput()
-    },
-    handleInput () {
-      this.$emit('input', this.active)
+    handleClick (value) {
+      this.active = value
     }
   }
 }

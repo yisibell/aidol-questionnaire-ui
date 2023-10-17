@@ -1,7 +1,9 @@
 <template>
   <div class="ai-title">
-    <span>{{ index }}</span>
-    <span>. </span>
+    <template v-if="index">
+      <span>{{ index }}</span>
+      <span>. </span>
+    </template>
     <span>{{ content }}</span>
     <span class="ai-title__suffix-text">{{ suffixText }}</span>
   </div>
