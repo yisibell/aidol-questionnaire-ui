@@ -2374,9 +2374,9 @@ var short_answer_component = normalizeComponent(
 )
 
 /* harmony default export */ var short_answer = (short_answer_component.exports);
-;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/lib/components/block-tips/index.vue?vue&type=template&id=205362cb&
-var block_tipsvue_type_template_id_205362cb_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ai-block-tips",class:[{ 'is-active': _vm.isActive }]},[_c('div',{staticClass:"ai-block-tips__content"},[_vm._t("default")],2),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isActive),expression:"isActive"}],staticClass:"ai-block-tips__message"},[_vm._t("content",function(){return [_vm._v(" "+_vm._s(_vm.message)+" ")]})],2)])}
-var block_tipsvue_type_template_id_205362cb_staticRenderFns = []
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/lib/components/block-tips/index.vue?vue&type=template&id=a3851aa4&
+var block_tipsvue_type_template_id_a3851aa4_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ai-block-tips",class:[{ 'is-active': _vm.isActive, animation: _vm.animation && _vm.isActive }]},[_c('div',{staticClass:"ai-block-tips__content"},[_vm._t("default")],2),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isActive),expression:"isActive"}],staticClass:"ai-block-tips__message"},[_vm._t("content",function(){return [_vm._v(" "+_vm._s(_vm.message)+" ")]})],2)])}
+var block_tipsvue_type_template_id_a3851aa4_staticRenderFns = []
 
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-81.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/lib/components/block-tips/index.vue?vue&type=script&lang=js&
@@ -2403,14 +2403,13 @@ var block_tipsvue_type_template_id_205362cb_staticRenderFns = []
 /* harmony default export */ var block_tipsvue_type_script_lang_js_ = ({
   name: 'AiBlockTips',
   props: {
-    // success, danger, warning
-    type: {
-      type: String,
-      default: ''
-    },
     message: {
       type: String,
       default: ''
+    },
+    animation: {
+      type: Boolean,
+      default: true
     }
   },
   computed: {
@@ -2431,8 +2430,8 @@ var block_tipsvue_type_template_id_205362cb_staticRenderFns = []
 ;
 var block_tips_component = normalizeComponent(
   components_block_tipsvue_type_script_lang_js_,
-  block_tipsvue_type_template_id_205362cb_render,
-  block_tipsvue_type_template_id_205362cb_staticRenderFns,
+  block_tipsvue_type_template_id_a3851aa4_render,
+  block_tipsvue_type_template_id_a3851aa4_staticRenderFns,
   false,
   null,
   null,
