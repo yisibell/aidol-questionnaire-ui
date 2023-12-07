@@ -21,14 +21,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # using yarn to install deps
-      - run: npm i -g yarn
+      # install deps
+      - run: npm i -g pnpm
 
-      - run: yarn install
+      - run: pnpm install
 
-      - run: yarn build:example
+      - run: pnpm build:example
 
-      # deploy to `docs` branch
+      # deploy to github pages
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
