@@ -4,6 +4,7 @@ module.exports = {
   css: {
     extract: true
   },
+  productionSourceMap: false,
   configureWebpack: {
     output: {
       libraryExport: 'default'

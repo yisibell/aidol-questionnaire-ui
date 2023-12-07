@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # deploy
 example/
+
+# build
+dist/
