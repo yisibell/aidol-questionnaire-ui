@@ -76,16 +76,16 @@ new Vue({
 
 ```bash
 # Install dependencies
-$ yarn install
+$ pnpm install
 
 # Develop with the example
-$ yarn dev
+$ pnpm dev
 
 # Build the lib
-$ yarn build
+$ pnpm build
 
 # Build the example
-$ yarn build:example
+$ pnpm build:example
 
 # Release new version
 $ npm run release
