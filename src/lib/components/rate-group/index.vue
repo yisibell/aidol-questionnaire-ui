@@ -24,6 +24,7 @@
         :max="max"
         :show-text="showText"
         :texts="texts"
+        :highlight-single-score="highlightSingleScore"
         class="ai-rate-group__list-item"
         @input="handleInput"
       />
@@ -109,6 +110,11 @@ export default {
     // 是否收集作答原因
     collectReason: {
       type: [Boolean, Number],
+      default: false
+    },
+    // 仅高亮单一评分值
+    highlightSingleScore: {
+      type: Boolean,
       default: false
     }
   },
