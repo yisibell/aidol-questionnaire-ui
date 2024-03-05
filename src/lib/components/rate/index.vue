@@ -192,7 +192,7 @@ export default {
       const index = this.rateOptions.findIndex(v => v.value === value)
 
       if (this.highlightSingleScore) {
-        return index === this.hoverActiveIndex
+        return index === this.hoverActiveIndex && this.hoverIng
       }
 
       return index <= this.hoverActiveIndex && this.hoverIng
