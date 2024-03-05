@@ -1,5 +1,24 @@
 # CHANGE LOGS
 
+## v1.8.0
+
+[compare changes](https://github.com/yisibell/aidol-questionnaire-ui/compare/v1.7.0...v1.8.0)
+
+### 🚀 Enhancements
+
+- 可配置仅高亮单一评分值 ([37b68e2](https://github.com/yisibell/aidol-questionnaire-ui/commit/37b68e2))
+
+### 🏡 Chore
+
+- Fix npm badge ([41a0438](https://github.com/yisibell/aidol-questionnaire-ui/commit/41a0438))
+- Migrate to pnpm ([72e3303](https://github.com/yisibell/aidol-questionnaire-ui/commit/72e3303))
+- **deploy:** Update deploy actions config ([0b5178f](https://github.com/yisibell/aidol-questionnaire-ui/commit/0b5178f))
+- Update readme ([766d421](https://github.com/yisibell/aidol-questionnaire-ui/commit/766d421))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.7.0
 
 [compare changes](https://github.com/yisibell/aidol-questionnaire-ui/compare/v1.6.0...v1.7.0)
