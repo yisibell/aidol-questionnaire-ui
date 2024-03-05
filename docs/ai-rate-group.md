@@ -20,4 +20,5 @@
 | `image` | 问题图片配置选项 | `Object` | - | 见 [image](./image.md) 配置 |
 | `optionStyle` | 定义选项的样式，同 `vue` 中的 `style` prop | `Object/Array` | - | - |
 | `reasonStyle` | 定义作答原因的样式，同 `vue` 中的 `style` prop | `Object/Array` | - | - |
+| `highlightSingleScore` | 仅高亮单一评分值 | `boolean` | - | `false` |
 

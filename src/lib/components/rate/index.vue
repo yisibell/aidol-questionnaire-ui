@@ -126,6 +126,11 @@ export default {
     collectReason: {
       type: [Boolean, Number],
       default: false
+    },
+    // 仅高亮单一评分值
+    highlightSingleScore: {
+      type: Boolean,
+      default: false
     }
   },
   emits: ['input', 'update:answerReasonValue'],
@@ -186,10 +191,18 @@ export default {
     isHoverActive (value) {
       const index = this.rateOptions.findIndex(v => v.value === value)
 
+      if (this.highlightSingleScore) {
+        return index === this.hoverActiveIndex
+      }
+
       return index <= this.hoverActiveIndex && this.hoverIng
     },
     isActive (value) {
       const index = this.rateOptions.findIndex(v => v.value === value)
+
+      if (this.highlightSingleScore) {
+        return index === this.activeIndex
+      }
 
       return index <= this.activeIndex && !this.hoverIng
     },
