@@ -1,5 +1,17 @@
 # CHANGE LOGS
 
+## v1.8.1
+
+[compare changes](https://github.com/yisibell/aidol-questionnaire-ui/compare/v1.8.0...v1.8.1)
+
+### 🩹 Fixes
+
+- **rate:** Hover active status render error when highlightSingleScore set to true ([700cb24](https://github.com/yisibell/aidol-questionnaire-ui/commit/700cb24))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.8.0
 
 [compare changes](https://github.com/yisibell/aidol-questionnaire-ui/compare/v1.7.0...v1.8.0)
