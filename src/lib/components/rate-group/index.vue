@@ -21,6 +21,7 @@
         :title-content="v[props.label]"
         :title-style="optionStyle"
         :option-style="optionStyle"
+        :min="min"
         :max="max"
         :show-text="showText"
         :texts="texts"
@@ -86,6 +87,11 @@ export default {
     reasonStyle: {
       type: [Object, Array, undefined],
       default: undefined
+    },
+    // 评分最小值
+    min: {
+      type: [Number, String],
+      default: 1
     },
     // 评分最大值
     max: {

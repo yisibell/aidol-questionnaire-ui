@@ -99,6 +99,11 @@ export default {
       type: [Object, Array, undefined],
       default: undefined
     },
+    // 最小值
+    min: {
+      type: [Number, String],
+      default: 1
+    },
     // 最大值
     max: {
       type: [Number, String],
@@ -157,6 +162,9 @@ export default {
         this.$emit('update:answerReasonValue', value)
       }
     },
+    rateMin () {
+      return Number.parseInt(this.min)
+    },
     rateMax () {
       return Number.parseInt(this.max)
     },
@@ -167,7 +175,7 @@ export default {
 
       const res = []
 
-      for (let i = 1; i <= this.rateMax; i++) {
+      for (let i = this.rateMin; i <= this.rateMax; i++) {
         res.push({ label: i, value: i })
       }
 
