@@ -1,5 +1,17 @@
 # CHANGE LOGS
 
+## v1.9.0
+
+[compare changes](https://github.com/yisibell/aidol-questionnaire-ui/compare/v1.8.1...v1.9.0)
+
+### 🚀 Enhancements
+
+- **rate:** Add `min` property for rate range setting ([37a50c7](https://github.com/yisibell/aidol-questionnaire-ui/commit/37a50c7))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.8.1
 
 [compare changes](https://github.com/yisibell/aidol-questionnaire-ui/compare/v1.8.0...v1.8.1)
