@@ -1,15 +1,13 @@
 <template>
   <ai-rate
     v-model="answer"
+    :index="2"
     :answer-reason-value.sync="reasonValue"
-    title-content="What is your fit preference? What is your fit preference?What is your fit preference?"
+    title-content="Please rate our service?"
     :max="5"
     show-text
     :collect-reason="true"
     :texts="texts"
-    :title-style="titleStyle"
-    :option-style="optionStyle"
-    :reason-style="reasonStyle"
     :highlight-single-score="true"
   />
 </template>
@@ -21,18 +19,7 @@ export default {
     return {
       answer: '',
       reasonValue: 'this is my reason!',
-      texts: ['很失望', '', '满意', '较满意', '非常满意'],
-      titleStyle: {
-        color: 'red'
-      },
-      optionStyle: {
-        color: 'green',
-        'font-size': '14px'
-      },
-      reasonStyle: {
-        color: 'red',
-        'font-size': '14px'
-      }
+      texts: ['很失望', '', '满意', '较满意', '非常满意']
     }
   }
 }

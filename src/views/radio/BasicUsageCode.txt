@@ -7,9 +7,6 @@
     :image="image"
     :collect-reason="collect_reason"
     title-content="How much are you willing to spend every time when shop clothing online?"
-    :title-style="titleStyle"
-    :option-style="optionStyle"
-    :reason-style="reasonStyle"
   />
 </template>
 
@@ -34,26 +31,7 @@ export default {
       collect_reason: true,
       image: {
         src:
-          'https://imgs.veryvoga.com/s330/a7/cc/10d1a8173eb551c214fa99aacef0a7cc.jpg',
-        container_style: {
-          'background-color': '#F8F8F8',
-          padding: '5px 0 5px 0',
-          'text-align': 'center'
-        },
-        style: {
-          width: '400px'
-        }
-      },
-      titleStyle: {
-        color: 'red'
-      },
-      optionStyle: {
-        color: 'green',
-        'font-size': '14px'
-      },
-      reasonStyle: {
-        color: 'red',
-        'font-size': '14px'
+          'https://picsum.photos/600/200'
       }
     }
   }
