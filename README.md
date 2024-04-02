@@ -21,16 +21,16 @@ A questionnaire survey ui library for Vue.js.
 
 ## 答题组件
 
-1. [ai-choice（选择题，支持单选，多选）](./docs/ai-choice.md)
-2. [ai-short-answer（简答题）](./docs/ai-short-answer.md)
-3. [ai-rate（评分）](./docs/ai-rate.md)
-4. [ai-rate-group（评分组）](./docs/ai-rate-group.md)
-5. [ai-custom-rate（可自定义的评分)](./docs/ai-custom-rate.md)
+1. ai-choice（选择题，支持单选，多选）
+2. ai-short-answer（简答题）
+3. ai-rate（评分）
+4. ai-rate-group（评分组）
+5. ai-custom-rate（可自定义的评分)
 
 
 ## 其他组件
 
-1. [ai-block-tips（提示块）](./docs/ai-block-tips.md)
+1. ai-block-tips（提示块）
 
 > TIPS: 需要添加组件，或者更新组件功能的话，请提交 **PR**。
 

@@ -67,10 +67,7 @@
 
     <DocCard title="文档说明">
       <template #description>
-        <a
-          :href="docs"
-          target="_blank"
-        >{{ docs }}</a>
+        <choiceMd />
       </template>
     </DocCard>
   </div>
@@ -88,6 +85,7 @@ import OptionImageUsage from './OptionImage'
 import OptionImageCode from './OptionImage/code.txt'
 import MultipleUsage from './MultipleUsage'
 import MultipleUsageCode from './MultipleUsage/code.txt'
+import choiceMd from '@/docs/ai-choice.md'
 
 export default {
   name: 'RadioDoc',
@@ -97,7 +95,8 @@ export default {
     ImageUsage,
     CollectReasonUsage,
     OptionImageUsage,
-    MultipleUsage
+    MultipleUsage,
+    choiceMd
   },
   data () {
     return {
@@ -105,8 +104,7 @@ export default {
       OptionImageCode,
       CollectReasonCode,
       ImageUsageCode,
-      BasicUsageCode,
-      docs: 'https://github.com/yisibell/aidol-questionnaire-ui/blob/main/docs/ai-choice.md'
+      BasicUsageCode
     }
   }
 }

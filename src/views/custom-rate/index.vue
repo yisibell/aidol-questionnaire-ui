@@ -11,15 +11,6 @@
         <pre class="lang-markup"><code>{{ BasicUsageCode }}</code></pre>
       </template>
     </DocCard>
-
-    <DocCard title="文档说明">
-      <template #description>
-        <a
-          :href="docs"
-          target="_blank"
-        >{{ docs }}</a>
-      </template>
-    </DocCard>
   </div>
 </template>
 
@@ -36,8 +27,7 @@ export default {
   },
   data () {
     return {
-      BasicUsageCode,
-      docs: 'https://github.com/yisibell/aidol-questionnaire-ui/blob/main/docs/ai-rate.md'
+      BasicUsageCode
     }
   }
 }

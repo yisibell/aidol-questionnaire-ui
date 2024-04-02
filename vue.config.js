@@ -19,5 +19,18 @@ module.exports = {
     rawRule.use('raw-loader')
       .loader('raw-loader')
       .end()
+
+    // markdown loader
+    const mdLoader = config.module
+      .rule('markdown')
+      .test(/\.md$/)
+
+    mdLoader.use('vue-loader')
+      .loader('vue-loader')
+      .end()
+
+      .use('vue-md-loader')
+      .loader('vue-md-loader')
+      .end()
   }
 }

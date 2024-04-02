@@ -9,10 +9,7 @@
 
     <DocCard title="文档说明">
       <template #description>
-        <a
-          :href="docs"
-          target="_blank"
-        >{{ docs }}</a>
+        <ShortAnswerMd />
       </template>
     </DocCard>
   </div>
@@ -22,17 +19,18 @@
 import DocCard from '@/components/DocCard.vue'
 import BasicUsage from './BasicUsage'
 import BasicUsageCode from './BasicUsageCode.txt'
+import ShortAnswerMd from '@/docs/ai-short-answer.md'
 
 export default {
   name: 'RadioDoc',
   components: {
     DocCard,
-    BasicUsage
+    BasicUsage,
+    ShortAnswerMd
   },
   data () {
     return {
-      BasicUsageCode,
-      docs: 'https://github.com/yisibell/aidol-questionnaire-ui/blob/main/docs/ai-short-answer.md'
+      BasicUsageCode
     }
   }
 }

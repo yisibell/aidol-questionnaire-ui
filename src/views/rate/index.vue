@@ -37,10 +37,7 @@
 
     <DocCard title="文档说明">
       <template #description>
-        <a
-          :href="docs"
-          target="_blank"
-        >{{ docs }}</a>
+        <RateMd />
       </template>
     </DocCard>
   </div>
@@ -57,21 +54,23 @@ import HighlightSingleScoreUsageCode from './HighlightSingleScore/code.txt'
 import SpecifyRateRangeUsage from './SpecifyRateRange/Usage.vue'
 import SpecifyRateRangeUsageCode from './SpecifyRateRange/code.txt'
 
+import RateMd from '@/docs/ai-rate.md'
+
 export default {
   name: 'RadioDoc',
   components: {
     DocCard,
     BasicUsage,
     HighlightSingleScoreUsage,
-    SpecifyRateRangeUsage
+    SpecifyRateRangeUsage,
+    RateMd
 
   },
   data () {
     return {
       BasicUsageCode,
       HighlightSingleScoreUsageCode,
-      SpecifyRateRangeUsageCode,
-      docs: 'https://github.com/yisibell/aidol-questionnaire-ui/blob/main/docs/ai-rate.md'
+      SpecifyRateRangeUsageCode
     }
   }
 }

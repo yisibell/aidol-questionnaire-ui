@@ -9,10 +9,7 @@
 
     <DocCard title="文档说明">
       <template #description>
-        <a
-          :href="docs"
-          target="_blank"
-        >{{ docs }}</a>
+        <RateGroupMd />
       </template>
     </DocCard>
   </div>
@@ -22,17 +19,19 @@
 import DocCard from '@/components/DocCard.vue'
 import BasicUsage from './BasicUsage'
 import BasicUsageCode from './BasicUsageCode.txt'
+import RateGroupMd from '@/docs/ai-rate-group.md'
 
 export default {
   name: 'RadioDoc',
   components: {
     DocCard,
-    BasicUsage
+    BasicUsage,
+    RateGroupMd
   },
   data () {
     return {
-      BasicUsageCode,
-      docs: 'https://github.com/yisibell/aidol-questionnaire-ui/blob/main/docs/ai-rate-group.md'
+      BasicUsageCode
+
     }
   }
 }
