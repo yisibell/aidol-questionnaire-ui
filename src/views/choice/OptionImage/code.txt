@@ -5,7 +5,7 @@
     :index="2"
     type="image"
     :image="image"
-    :collect-reason="collect_reason"
+    :collect-reason="true"
     :options="options"
     title-content="How much are you willing to spend every time when shop clothing online?"
   />
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'RadioImage',
+  name: 'ChoiceOptionImageDemo',
   data () {
     return {
       checked: '',
@@ -51,7 +51,6 @@ export default {
             'https://picsum.photos/150?5'
         }
       ],
-      collect_reason: true,
       image: {
         src:
           'https://picsum.photos/600/200'

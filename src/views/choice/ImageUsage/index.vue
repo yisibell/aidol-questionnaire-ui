@@ -5,14 +5,13 @@
     :index="1"
     :options="options"
     :image="image"
-    :collect-reason="collect_reason"
     title-content="How much are you willing to spend every time when shop clothing online?"
   />
 </template>
 
 <script>
 export default {
-  name: 'RadioDemo',
+  name: 'RadioImageDemo',
   data () {
     return {
       checked: '',
@@ -28,7 +27,6 @@ export default {
         { label: '选项文本内容', value: 4 },
         { label: '选项文本内容', value: 5 }
       ],
-      collect_reason: true,
       image: {
         src:
           'https://picsum.photos/600/200'

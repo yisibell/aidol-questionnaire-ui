@@ -7,25 +7,9 @@ export const componetRoutes = [
   {
     path: '/radio',
     name: 'Radio',
-    component: () => import('@/views/radio'),
+    component: () => import('@/views/choice'),
     meta: {
-      title: '单选题'
-    }
-  },
-  {
-    path: '/radio-image',
-    name: 'RadioImage',
-    component: () => import('@/views/radio-image'),
-    meta: {
-      title: '单选题(带图片)'
-    }
-  },
-  {
-    path: '/checkbox',
-    name: 'Checkbox',
-    component: () => import('@/views/checkbox'),
-    meta: {
-      title: '多选题'
+      title: '选择题'
     }
   },
   {

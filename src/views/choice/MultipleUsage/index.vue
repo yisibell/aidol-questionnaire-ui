@@ -1,12 +1,13 @@
 <template>
   <ai-choice
     v-model="checked"
+    :answer-reason-value.sync="answerReasonValue"
     :index="3"
     :image="image"
-    :collect-reason="collect_reason"
-    multiple
+    :collect-reason="true"
     :options="options"
     :max="2"
+    :multiple="true"
     title-content="What kind of sale promotions do you prefer? (multiple choice)"
   />
 </template>
@@ -17,6 +18,7 @@ export default {
   data () {
     return {
       checked: [],
+      answerReasonValue: 'my reason',
       options: [
         { label: '选项文本内容', value: 1 },
         { label: '选项文本内容', value: 2 },
@@ -24,7 +26,6 @@ export default {
         { label: '选项文本内容', value: 4 },
         { label: '选项文本内容', value: 5 }
       ],
-      collect_reason: true,
       image: {
         src:
           'https://picsum.photos/600/200'
