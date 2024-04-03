@@ -1,8 +1,4 @@
-## ai-choice
-
-选择题（包含单选、多选）。
-
-### Attributes
+# Attributes
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | :---: |:---: |:---: |:---:| :---: |
@@ -20,6 +16,6 @@
 | `autoOptionsIndex` | 是否自动生成待选项索引标识符 | `Boolean` | - | `true` |
 | `optionsIndexSet` | 自动生成待选项索引标识符时的匹配列表 | `Array` | - | `['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']` |
 | `options` | 待选项列表 | `Array of Object` | - | `[]` |
-| `props` | 配置选项 | `Object` | - | 详见 [props](./props.md) 配置 |
+| `props` | 配置选项 | `Object` | - | 详见 **props** 配置 |
 | `collectReason`| 是否收集作答原因 | `Boolean` | - | `false` |
-| `image` | 问题图片配置选项 | `Object` | - | 详见 [image](./image.md) 配置 |
+| `image` | 问题图片配置选项 | `Object` | - | 详见 **image** 配置 |

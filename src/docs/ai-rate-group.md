@@ -1,8 +1,4 @@
-# ai-rate-group
-
-评分组。
-
-### Attributes
+# Attributes
 
 | 参数 | 说明 | 类型 |可选值 | 默认值 |
 | :---: |:---: |:---: |:---:| :---: |
@@ -16,9 +12,9 @@
 | `options` | 评分列表配置 | `Array of Object` | - | `[]` |
 | `titleStyle` | 定义标题的样式，同 `vue` 中的 `style` prop | `Object/Array` | - | - |
 | `titleContent` | 标题的内容 | `String` | - | - |
-| `props` | 配置选项 | `Object` | - | 见 [props](./props.md) |
+| `props` | 配置选项 | `Object` | - | 见 **props** 配置 |
 | `collectReason`| 是否收集作答原因 | `Boolean` | - | `false` |
-| `image` | 问题图片配置选项 | `Object` | - | 见 [image](./image.md) 配置 |
+| `image` | 问题图片配置选项 | `Object` | - | 见 **image** 配置 |
 | `optionStyle` | 定义选项的样式，同 `vue` 中的 `style` prop | `Object/Array` | - | - |
 | `reasonStyle` | 定义作答原因的样式，同 `vue` 中的 `style` prop | `Object/Array` | - | - |
 | `highlightSingleScore` | 仅高亮单一评分值 | `boolean` | - | `false` |

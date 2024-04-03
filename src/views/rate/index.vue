@@ -38,6 +38,7 @@
     <DocCard title="文档说明">
       <template #description>
         <RateMd />
+        <ImageMd />
       </template>
     </DocCard>
   </div>
@@ -55,6 +56,7 @@ import SpecifyRateRangeUsage from './SpecifyRateRange/Usage.vue'
 import SpecifyRateRangeUsageCode from './SpecifyRateRange/code.txt'
 
 import RateMd from '@/docs/ai-rate.md'
+import ImageMd from '@/docs/image.md'
 
 export default {
   name: 'RadioDoc',
@@ -63,7 +65,8 @@ export default {
     BasicUsage,
     HighlightSingleScoreUsage,
     SpecifyRateRangeUsage,
-    RateMd
+    RateMd,
+    ImageMd
 
   },
   data () {

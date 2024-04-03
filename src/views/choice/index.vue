@@ -67,7 +67,9 @@
 
     <DocCard title="文档说明">
       <template #description>
-        <choiceMd />
+        <ChoiceMd />
+        <PropsMd />
+        <ImageMd />
       </template>
     </DocCard>
   </div>
@@ -85,7 +87,9 @@ import OptionImageUsage from './OptionImage'
 import OptionImageCode from './OptionImage/code.txt'
 import MultipleUsage from './MultipleUsage'
 import MultipleUsageCode from './MultipleUsage/code.txt'
-import choiceMd from '@/docs/ai-choice.md'
+import ChoiceMd from '@/docs/ai-choice.md'
+import PropsMd from '@/docs/props.md'
+import ImageMd from '@/docs/image.md'
 
 export default {
   name: 'RadioDoc',
@@ -96,7 +100,9 @@ export default {
     CollectReasonUsage,
     OptionImageUsage,
     MultipleUsage,
-    choiceMd
+    ChoiceMd,
+    PropsMd,
+    ImageMd
   },
   data () {
     return {
