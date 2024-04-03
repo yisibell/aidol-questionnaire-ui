@@ -6,6 +6,7 @@
 
 <script>
 import DefaultLayout from '@/layouts/default'
+
 export default {
   components: {
     DefaultLayout

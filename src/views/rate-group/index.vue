@@ -10,7 +10,6 @@
     <DocCard title="文档说明">
       <template #description>
         <RateGroupMd />
-        <PropsMd />
         <ImageMd />
       </template>
     </DocCard>
@@ -22,7 +21,6 @@ import DocCard from '@/components/DocCard.vue'
 import BasicUsage from './BasicUsage'
 import BasicUsageCode from './BasicUsageCode.txt'
 import RateGroupMd from '@/docs/ai-rate-group.md'
-import PropsMd from '@/docs/props.md'
 import ImageMd from '@/docs/image.md'
 
 export default {
@@ -31,7 +29,6 @@ export default {
     DocCard,
     BasicUsage,
     RateGroupMd,
-    PropsMd,
     ImageMd
   },
   data () {

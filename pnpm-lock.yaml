@@ -50,6 +50,9 @@ devDependencies:
   eslint-plugin-vue:
     specifier: ^8.7.1
     version: 8.7.1(eslint@8.30.0)
+  highlight.js:
+    specifier: ^11.9.0
+    version: 11.9.0
   prettier:
     specifier: ^2.5.1
     version: 2.5.1

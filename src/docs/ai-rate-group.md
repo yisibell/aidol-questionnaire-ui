@@ -19,3 +19,10 @@
 | `reasonStyle` | 定义作答原因的样式，同 `vue` 中的 `style` prop | `Object/Array` | - | - |
 | `highlightSingleScore` | 仅高亮单一评分值 | `boolean` | - | `false` |
 
+
+# props 配置
+
+| 键名 | 说明 | 默认值 |
+| :---: | :---: | :---: |
+| `label` | 指定单个评分的标题字段，在 `options` 中的取值 | `'label'` |
+| `value` | 指定评分结果对象的**键**，在 `options` 中的取值 | `'value'` |

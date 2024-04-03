@@ -68,7 +68,6 @@
     <DocCard title="文档说明">
       <template #description>
         <ChoiceMd />
-        <PropsMd />
         <ImageMd />
       </template>
     </DocCard>
@@ -88,7 +87,6 @@ import OptionImageCode from './OptionImage/code.txt'
 import MultipleUsage from './MultipleUsage'
 import MultipleUsageCode from './MultipleUsage/code.txt'
 import ChoiceMd from '@/docs/ai-choice.md'
-import PropsMd from '@/docs/props.md'
 import ImageMd from '@/docs/image.md'
 
 export default {
@@ -101,7 +99,6 @@ export default {
     OptionImageUsage,
     MultipleUsage,
     ChoiceMd,
-    PropsMd,
     ImageMd
   },
   data () {
