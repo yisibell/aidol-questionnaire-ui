@@ -3,7 +3,7 @@
     <div class="doc-card__title">
       {{ title }}
     </div>
-    <div class="doc-card__description">
+    <div class="doc-card__description markdown-body">
       <slot name="description">
         {{ description }}
       </slot>

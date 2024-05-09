@@ -50,6 +50,9 @@ devDependencies:
   eslint-plugin-vue:
     specifier: ^8.7.1
     version: 8.7.1(eslint@8.30.0)
+  github-markdown-css:
+    specifier: ^5.5.1
+    version: 5.5.1
   highlight.js:
     specifier: ^11.9.0
     version: 11.9.0
@@ -4745,6 +4748,11 @@ packages:
       tar: 6.2.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /github-markdown-css@5.5.1:
+    resolution: {integrity: sha512-2osyhNgFt7DEHnGHbgIifWawAqlc68gjJiGwO1xNw/S48jivj8kVaocsVkyJqUi3fm7fdYIDi4C6yOtcqR/aEQ==}
+    engines: {node: '>=10'}
     dev: true
 
   /glob-parent@5.1.2:

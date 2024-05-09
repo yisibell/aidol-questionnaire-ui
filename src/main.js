@@ -5,7 +5,7 @@ import router from './router'
 import AidolUI from '@/lib/main'
 
 import 'prismjs/themes/prism.min.css'
-// import 'highlight.js/styles/github.css'
+import 'github-markdown-css/github-markdown-light.css'
 
 Vue.use(AidolUI)
 
